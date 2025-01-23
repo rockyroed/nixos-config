@@ -51,11 +51,8 @@
   services.xserver.displayManager.gdm.enable = true;
   services.xserver.desktopManager.gnome.enable = true;
 
-  # Enable x11 and i3
+  # Enable x11
   services.xserver.enable = true;
-  services.xserver.windowManager.i3 = {
-    enable = true;
-  };
 
   # Configure keymap in X11
   services.xserver.xkb = {
@@ -104,7 +101,7 @@
     packageOverrides = pkgs: rec {
       polybar = pkgs.polybar.override {
         i3Support = true;
-	pulseSupport = true;
+        pulseSupport = true;
       };
     };
   };
