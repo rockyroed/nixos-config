@@ -9,6 +9,7 @@ in {
         ./keybindings.nix
         ./workspaces.nix
         ./window_rules.nix
+        ./extraConfig.nix
     ];
 
     xsession.windowManager.i3 = {
