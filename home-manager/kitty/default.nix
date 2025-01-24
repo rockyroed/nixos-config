@@ -9,6 +9,7 @@
         };
         settings = {
             enable_audio_bell = false;
+            window_padding_width = 8;
             include = "gruvbox-material-dark-hard.conf";
         };
     };
