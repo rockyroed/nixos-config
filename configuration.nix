@@ -32,6 +32,15 @@
   # Enable networking
   networking.networkmanager.enable = true;
 
+  # Timezone
+  time.timeZone = "Asia/Manila";
+  services.timesyncd.servers = [
+    "0.asia.pool.ntp.org"
+    "1.asia.pool.ntp.org"
+    "2.asia.pool.ntp.org"
+    "3.asia.pool.ntp.org"
+  ];
+
   # Select internationalisation properties.
   i18n.defaultLocale = "en_PH.UTF-8";
 
