@@ -51,8 +51,11 @@
   services.xserver.displayManager.gdm.enable = true;
   services.xserver.desktopManager.gnome.enable = true;
 
-  # Enable x11
+  # Enable x11 and i3
   services.xserver.enable = true;
+  services.xserver.windowManager.i3 = {
+    enable = true;
+  };
 
   # Configure keymap in X11
   services.xserver.xkb = {
