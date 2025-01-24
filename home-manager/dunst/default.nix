@@ -2,7 +2,7 @@
 
 let
     foreground = "#d4be98";
-    background = "#1d2021";
+    background = "#282828";
     blue = "#7daea3";
     yellow = "#d8a657";
     red = "#ea6962";
