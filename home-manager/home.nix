@@ -7,6 +7,7 @@
     ./btop/default.nix
     ./cava/default.nix
     ./dunst/default.nix
+    ./fastfetch/default.nix
     ./flameshot/default.nix
     ./greenclip/default.nix
     ./i3/default.nix
