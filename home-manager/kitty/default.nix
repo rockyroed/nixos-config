@@ -9,12 +9,12 @@
         };
         settings = {
             enable_audio_bell = false;
-            window_padding_width = 8;
-            include = "gruvbox-material-dark-hard.conf";
+            window_padding_width = 6;
+            include = "gruvbox-material-dark-medium.conf";
         };
     };
 
     home.file = {
-        ".config/kitty/gruvbox-material-dark-hard.conf".source = ./gruvbox-material-dark-hard.conf;
+        ".config/kitty/gruvbox-material-dark-medium.conf".source = ./gruvbox-material-dark-medium.conf;
     };
 }
