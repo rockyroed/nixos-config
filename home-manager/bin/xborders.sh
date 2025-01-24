@@ -8,4 +8,4 @@ while ! pgrep -x "picom" > /dev/null; do
 done
 
 echo "$(date): Picom detected. Running xborders..." >> "$OUTPUT_FILE"
-xborders --border-radius 6 --border-width 3 --border-rgba "#7DAEA3FF"
+xborders --border-radius 6 --border-width 3 --border-rgba "#89B482FF"
