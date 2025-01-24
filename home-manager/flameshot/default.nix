@@ -1,7 +1,18 @@
 { config, pkgs, ... }:
 
 {
-    home.file = {
-        ".config/flameshot/flameshot.ini".source = ./flameshot.ini;
+    services.flameshot = {
+        enable = true;
+        settings = {
+            General = {
+                disabledTrayIcon = true;
+                showStartupLaunchMessage = false;
+                saveAsFileExtension = ".png";
+                savePath = "/tmp";
+                uiColor = "#a9b665";
+                contrastUiColor = "#3b4439";
+                drawColor = "#ea6962";
+            };
+        };
     };
 }
