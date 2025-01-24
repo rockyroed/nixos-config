@@ -1,7 +1,11 @@
 { config, pkgs, ... }:
 
 {
-    home.file = {
-        ".config/picom/picom.conf".source = ./picom.conf;
+    imports = [
+        ./config/default.nix
+    ];
+
+    services.picom = {
+        enable = true;
     };
 }
