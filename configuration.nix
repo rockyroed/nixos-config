@@ -99,16 +99,6 @@
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
-  # Overrides
-  nixpkgs.config = {
-    packageOverrides = pkgs: rec {
-      polybar = pkgs.polybar.override {
-        i3Support = true;
-        pulseSupport = true;
-      };
-    };
-  };
-
   # Spicetify
   programs.spicetify =
   let
@@ -119,18 +109,14 @@
     enabledExtensions = with spicePkgs.extensions; [
       adblock
       bookmark
-      seekSong
-      fullAppDisplay
       keyboardShortcut
-      oldSidebar
-      copyToClipboard
       playNext
       hidePodcasts
       beautifulLyrics
       shuffle # shuffle+ (special characters are sanitized out of extension names)
     ];
-    theme = spicePkgs.themes.dribbblish;
-    colorScheme = "gruvbox-material-dark";
+    theme = spicePkgs.themes.text;
+    colorScheme = "Gruvbox";
   };
 
   # List packages installed in system profile. To search, run:
