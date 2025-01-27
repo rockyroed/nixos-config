@@ -1,6 +1,6 @@
 configuration {
     show-icons: true;
-    font: "JetBrains Mono 12";
+    font: "JetBrainsMono Nerd Font Mono 10";
     icon-theme: "Papirus-Dark";
 
     display-ssh:    "󰣀 ssh:";

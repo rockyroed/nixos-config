@@ -17,7 +17,6 @@
     bgStatusline3: #504945;
 
     background-color: @bg0;
-    font: "JetBrainsMono Nerd Font Mono 10";
 }
 
 window {
