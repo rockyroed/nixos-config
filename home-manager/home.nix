@@ -18,6 +18,7 @@
     ./wallpapers/default.nix
     ./zsh/default.nix
     ./redshift/default.nix
+    ./xborders/default.nix
   ];
 
   # Home Manager needs a bit of information about you and the paths it should
@@ -89,6 +90,13 @@
 			Requires = [ "graphical-session-pre.target" ];
 		};
 	};
+
+  # Session variables
+  home.sessionVariables = {
+    EDITOR = "nvim";
+    BROWSER = "firefox";
+    TERMINAL = "kitty";
+  };
   
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
