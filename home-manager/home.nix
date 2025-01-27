@@ -80,6 +80,15 @@
       package = pkgs.adwaita-qt;
     };
   };
+
+  # A temporary fix to the flameshot tray.target error
+  # https://github.com/nix-community/home-manager/issues/2064#issuecomment-887300055
+  systemd.user.targets.tray = {
+		Unit = {
+			Description = "Home Manager System Tray";
+			Requires = [ "graphical-session-pre.target" ];
+		};
+	};
   
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
