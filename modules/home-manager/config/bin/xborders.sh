@@ -10,7 +10,7 @@ done
 echo "$(date): Picom detected. Running xborders..." >> "$OUTPUT_FILE"
 
 # Go to xborders dir in dotfiles
-cd ~/.dotfiles/shell/python/github/lunegh/xborders/
+cd ~/.dotfiles/modules/shell/python/github/lunegh/xborders/
 
 # Run nix-shell and execute xborders
 nix-shell --command "zsh -c './xborders'"

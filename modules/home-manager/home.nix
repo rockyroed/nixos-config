@@ -2,23 +2,23 @@
 
 {
   imports = [
-    ./bat/default.nix
-    ./bin/default.nix
-    ./btop/default.nix
-    ./cava/default.nix
-    ./dunst/default.nix
-    ./fastfetch/default.nix
-    ./flameshot/default.nix
-    ./greenclip/default.nix
-    ./i3/default.nix
-    ./kitty/default.nix
-    ./picom/default.nix
-    ./polybar/default.nix
-    ./rofi/default.nix
-    ./wallpapers/default.nix
-    ./zsh/default.nix
-    ./redshift/default.nix
-    ./xborders/default.nix
+    ./config/bat/default.nix
+    ./config/bin/default.nix
+    ./config/btop/default.nix
+    ./config/cava/default.nix
+    ./config/dunst/default.nix
+    ./config/fastfetch/default.nix
+    ./config/flameshot/default.nix
+    ./config/greenclip/default.nix
+    ./config/i3/default.nix
+    ./config/kitty/default.nix
+    ./config/picom/default.nix
+    ./config/polybar/default.nix
+    ./config/rofi/default.nix
+    ./config/wallpapers/default.nix
+    ./config/zsh/default.nix
+    ./config/redshift/default.nix
+    ./config/xborders/default.nix
   ];
 
   # Home Manager needs a bit of information about you and the paths it should

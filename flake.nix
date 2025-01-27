@@ -22,7 +22,7 @@
       home-manager,
       spicetify-nix,
       ...
-    }@inputs:
+    } @inputs:
     let
       lib = nixpkgs.lib;
       system = "x86_64-linux";
@@ -30,17 +30,19 @@
     in
     {
       nixosConfigurations = {
-        roed-nixos = lib.nixosSystem {
+        desktop = lib.nixosSystem {
           specialArgs = { inherit inputs; };
           inherit system;
-          modules = [ ./configuration.nix ];
+          modules = [
+            ./hosts/desktop/desktop.nix
+          ];
         };
       };
       homeConfigurations = {
-        roed = home-manager.lib.homeManagerConfiguration {
+        desktop = home-manager.lib.homeManagerConfiguration {
           inherit pkgs;
           modules = [
-            ./home-manager/home.nix
+            ./modules/home-manager/home.nix
           ];
         };
       };

@@ -1,0 +1,7 @@
+__pycache__/
+.update_ignore.txt
+.idea
+venv
+build
+xborders.egg-info
+.lock
