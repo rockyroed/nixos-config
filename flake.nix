@@ -15,26 +15,34 @@
     };
   };
 
-  outputs = { self, nixpkgs, home-manager, spicetify-nix, ... } @inputs :
-  let
-    lib = nixpkgs.lib;
-    system = "x86_64-linux";
-    pkgs = nixpkgs.legacyPackages.${system};
-  in {
-    nixosConfigurations = {
-      roed-nixos = lib.nixosSystem {
-	specialArgs = {inherit inputs;};
-        inherit system;
-	modules = [ ./configuration.nix ];
+  outputs =
+    {
+      self,
+      nixpkgs,
+      home-manager,
+      spicetify-nix,
+      ...
+    }@inputs:
+    let
+      lib = nixpkgs.lib;
+      system = "x86_64-linux";
+      pkgs = nixpkgs.legacyPackages.${system};
+    in
+    {
+      nixosConfigurations = {
+        roed-nixos = lib.nixosSystem {
+          specialArgs = { inherit inputs; };
+          inherit system;
+          modules = [ ./configuration.nix ];
+        };
+      };
+      homeConfigurations = {
+        roed = home-manager.lib.homeManagerConfiguration {
+          inherit pkgs;
+          modules = [
+            ./home-manager/home.nix
+          ];
+        };
       };
     };
-    homeConfigurations = {
-      roed = home-manager.lib.homeManagerConfiguration {
-	inherit pkgs;
-	modules = [ 
-	  ./home-manager/home.nix
-	];
-      };
-    };
-  };
 }
