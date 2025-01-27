@@ -18,6 +18,7 @@ in {
             interface-type = "wired";
             label-connected = "%{T2} 󰈁 %{T-}";
             label-disconnected = "%{T2} 󰈂 %{T-}";
+            label-disconnected-foreground = "${background-5}";
             format-connected-underline = "${blue}";
             format-disconnected-underline = "${background-5}";
         };

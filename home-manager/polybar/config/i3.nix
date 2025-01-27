@@ -3,7 +3,7 @@
 let
     background-1 = "#32302f";
     background-5 = "#5a524c";
-    foreground = "#d4be98";
+    foreground = "#ddc7a1";
     red = "#ea6962";
     green = "#a9b665";
 in {

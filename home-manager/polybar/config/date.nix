@@ -1,7 +1,7 @@
 { config, pkgs, ... }:
 
 let
-    foreground = "#d4be98";
+    foreground = "#ddc7a1";
     yellow = "#d8a657";
 in {
     services.polybar.config = {

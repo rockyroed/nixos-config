@@ -2,7 +2,7 @@
 
 let
     background = "#282828";
-    foreground = "#d4be98";
+    foreground = "#ddc7a1";
 in {
     imports = [
         ./cpu.nix
