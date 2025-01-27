@@ -1,0 +1,3 @@
+[submodule "shell/python/github/lunegh/xborders"]
+	path = shell/python/github/lunegh/xborders
+	url = https://github.com/rockyroed/xborders
