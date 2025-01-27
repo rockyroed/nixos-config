@@ -153,7 +153,7 @@
         vesktop
         proton-pass
         libnotify
-        rofi
+        gimp
     ];
 
     # This value determines the NixOS release from which the default
