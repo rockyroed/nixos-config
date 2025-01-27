@@ -1,4 +1,4 @@
-OUTPUT_FILE="./xborder_output.log"  # Specify the path to the output file
+OUTPUT_FILE="$HOME/xborder_output.log"  # Specify the path to the output file
 
 sleep 2
 
@@ -8,4 +8,9 @@ while ! pgrep -x "picom" > /dev/null; do
 done
 
 echo "$(date): Picom detected. Running xborders..." >> "$OUTPUT_FILE"
-xborders --border-radius 6 --border-width 3 --border-rgba "#A9B665FF"
+
+# Go to xborders dir in dotfiles
+cd ~/.dotfiles/shell/python/github/lunegh/xborders/
+
+# Run nix-shell and execute xborders
+nix-shell --command "zsh -c './xborders'"
