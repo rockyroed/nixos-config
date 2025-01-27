@@ -39,6 +39,9 @@ in {
         "${mod}+r" = "exec --no-startup-id rofi -show run";
         "${mod}+space" = "exec --no-startup-id rofi -show drun";
         "${mod}+Tab" = "exec --no-startup-id rofi -show window";
+        "${mod}+Shift+e" = "exec --no-startup-id rofi -show emoji";
+        "${mod}+c" = "exec --no-startup-id rofi -show calc";
+        "${mod}+Shift+p" = "exec --no-startup-id ~/.config/rofi/power-menu.sh";
 
         # thunar
         "${mod}+e" = "exec thunar";
@@ -68,7 +71,7 @@ in {
         "${mod}+Right" = "focus right";
 
         # fullscreen mode
-        "${mod}+f" = "fullscreen toggle";
+        "${mod}+Shift+f" = "fullscreen toggle";
 
         # floating mode
         "${mod}+Shift+space" = "floating toggle";
@@ -101,6 +104,6 @@ in {
         "${mod}+Shift+r" = "restart";
 
         # exit i3
-        "${mod}+Shift+e" = "exit";
+        "${mod}+Ctrl+Shift+e" = "exit";
     };
 }
