@@ -15,77 +15,77 @@
                     binaryPrefix = "si";
                 };
                 color = "green";
-                separator = "   ";
+                separator = " ";
             };
             modules = [
                 {
                     type = "custom";
                     outputColor = "blue";
-                    format = ''┌──────────────────── OS Information ────────────────────┐'';
+                    format = ''┌─────────────────── OS Information ───────────────────┐'';
                 }
                 {
                     type = "title";
-                    key = " ╭─  ";
+                    key = "  ╭─  ";
                 }
                 {
                     type = "os";
-                    key = " ├─ 󱄅 ";
+                    key = "  ├─ 󱄅 ";
                 }
                 {
                     type = "kernel";
-                    key = " ├─  ";
+                    key = "  ├─  ";
                 }
                 {
                     type = "packages";
-                    key = " ├─  ";
+                    key = "  ├─  ";
                 }
                 {
                     type = "shell";
-                    key = " ╰─  ";
+                    key = "  ╰─  ";
                 }
                 {
                     type = "custom";
                     outputColor = "blue";
-                    format = ''├───────────────── Hardware Information ─────────────────┤'';
+                    format = ''├──────────────── Hardware Information ────────────────┤'';
                 }
                 {
                     type = "display";
-                    key = " ╭─ 󰍹 ";
+                    key = "  ╭─ 󰍹 ";
                     compactType = "original-with-refresh-rate";
                 }
                 {
                     type = "cpu";
-                    key = " ├─ 󰍛 ";
+                    key = "  ├─ 󰍛 ";
                 }
                 {
                     type = "gpu";
-                    key = " ├─  ";
+                    key = "  ├─  ";
                 }
                 {
                     type = "memory";
-                    key = " ╰─  ";
+                    key = "  ╰─  ";
                 }
                 {
                     type = "custom";
                     outputColor = "blue";
-                    format = ''├───────────────── Software Information ─────────────────┤'';
+                    format = ''├──────────────── Software Information ────────────────┤'';
                 }
                 {
                     type = "wm";
-                    key = " ╭─  ";
+                    key = "  ╭─  ";
                 }
                 {
                     type = "terminal";
-                    key = " ├─  ";
+                    key = "  ├─  ";
                 }
                 {
                     type = "icons";
-                    key = " ╰─ 󰈹 ";
+                    key = "  ╰─ 󰈹 ";
                 }
                 {
                     type = "custom";
                     outputColor = "blue";
-                    format = ''└────────────────────────────────────────────────────────┘'';
+                    format = ''└──────────────────────────────────────────────────────┘'';
                 }
                 {
                     type = "custom";
