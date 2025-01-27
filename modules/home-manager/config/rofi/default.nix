@@ -2,7 +2,7 @@
 
 {
     home.file = {
-        ".config/rofi/catppuccin-macchiato.rasi".source = ./catppuccin-macchiato.rasi;
+        ".config/rofi/gruvbox-material.rasi".source = ./gruvbox-material.rasi;
         ".config/rofi/config.rasi".source = ./config.rasi;
     };
 }

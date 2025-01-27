@@ -1,17 +1,16 @@
-configuration{
-    modi: "run,drun,window";
-    icon-theme: "Oranchelo";
+configuration {
     show-icons: true;
-    terminal: "alacritty";
-    drun-display-format: "{icon} {name}";
-    location: 0;
-    disable-history: false;
-    hide-scrollbar: true;
-    display-drun: "   Apps ";
-    display-run: "   Run ";
-    display-window: " 󰕰  Window ";
-    display-Network: " 󰤨  Network ";
-    sidebar-mode: true;
+    font: "JetBrains Mono 12";
+    icon-theme: "Papirus-Dark";
+
+    display-ssh:    "󰣀 ssh:";
+    display-run:    "󱓞 run:";
+    display-drun:   "󰣖 drun:";
+    display-window: "󱂬 window:";
+    display-combi:  "󰕘 combi:";
+    display-filebrowser: "󰉋 filebrowser:";
+
+    dpi: 120;
 }
 
-@theme "catppuccin-macchiato"
+@theme "gruvbox-material"
