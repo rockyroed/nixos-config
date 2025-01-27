@@ -2,6 +2,6 @@
 
 {
     home.file = {
-        ".wallpapers/3d-model.jpg".source = ./3d-model.jpg;
+        ".wallpapers/gruv-limits.png".source = ./gruv-limits.png;
     };
 }
