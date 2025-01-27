@@ -3,10 +3,6 @@
 {
     xsession.windowManager.i3.config.startup = [
         {
-            command = "nm-applet";
-            notification = false;
-        }
-        {
             command = "vesktop";
             notification = false;
         }
@@ -52,7 +48,7 @@
             always = true;
         }
         {
-            command = "feh --bg-fill $HOME/.wallpapers/3d-model.jpg";
+            command = "feh --bg-fill $HOME/.wallpapers/gruv-limits.png";
             notification = false;
             always = true;
         }
