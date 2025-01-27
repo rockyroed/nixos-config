@@ -137,17 +137,7 @@
     git
     spotify
     spicetify-cli
-    polybar
-    dunst
-    bat
-    btop
-    cava
-    flameshot
     haskellPackages.greenclip
-    kitty
-    fastfetch
-    picom
-    rofi
     eza
     vivid
     nerd-fonts.jetbrains-mono
@@ -157,7 +147,6 @@
     autotiling
     xborders
     feh
-    networkmanagerapplet
     betterlockscreen
     obs-studio
     signal-desktop
@@ -165,6 +154,7 @@
     vesktop
     proton-pass
     libnotify
+    rofi
   ];
 
   # This value determines the NixOS release from which the default
