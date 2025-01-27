@@ -10,7 +10,7 @@
         longitude = 120.99;
 
         temperature = {
-            night = 3500;
+            night = 2500;
         };
     };
 }
