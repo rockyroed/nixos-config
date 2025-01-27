@@ -1,7 +1,7 @@
 { config, pkgs, ... }:
 
 let
-    foreground = "#d4be98";
+    foreground = "#ddc7a1";
     background = "#282828";
     blue = "#7daea3";
     yellow = "#d8a657";
