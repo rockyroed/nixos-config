@@ -47,13 +47,13 @@
                     name = "Work";
                     color = "blue";
                     icon = "briefcase";
-                    id = 2;
+                    id = 1;
                 };
                 school = {
                     name = "School";
                     color = "green";
                     icon = "fruit";
-                    id = 1;
+                    id = 2;
                 };
             };
         };
