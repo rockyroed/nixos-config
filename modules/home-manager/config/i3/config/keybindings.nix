@@ -54,7 +54,7 @@ in {
 
         # spotify and cava
         "${mod}+s" = "exec spotify";
-        "${mod}+Shift+s" = "exec spotify & kitty -e cava";
+        "${mod}+Shift+s" = "exec spotify; sleep 0.5; kitty -e cava";
 
         # change focus
         "${mod}+h" = "focus left";
