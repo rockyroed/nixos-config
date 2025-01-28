@@ -20,6 +20,7 @@
     ./config/redshift/default.nix
     ./config/xborders/default.nix
     ./config/nvim/default.nix
+    ./config/firefox/default.nix
   ];
 
   # Home Manager needs a bit of information about you and the paths it should
