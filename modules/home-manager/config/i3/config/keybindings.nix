@@ -52,6 +52,10 @@ in {
         # clipboard
         "${mod}+v" = "exec rofi -modi \"clipboard:greenclip print\" -show clipboard -run-command '{cmd}'";
 
+        # spotify and cava
+        "${mod}+s" = "exec spotify";
+        "${mod}+Shift+s" = "exec spotify & kitty -e cava";
+
         # change focus
         "${mod}+h" = "focus left";
         "${mod}+j" = "focus down";
