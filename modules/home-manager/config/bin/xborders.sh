@@ -12,5 +12,6 @@ echo "$(date): Picom detected. Running xborders..." >> "$OUTPUT_FILE"
 # Go to xborders dir in dotfiles
 cd ~/.dotfiles/modules/shell/python/github/lunegh/xborders/
 
-# Run nix-shell and execute xborders
-nix-shell --command "zsh -c './xborders'"
+while true; do
+    nix-shell --command "zsh -c './xborders'" || echo "$(date): xborders stopped unexpectedly. Restarting..." >> "$OUTPUT_FILE"
+done
