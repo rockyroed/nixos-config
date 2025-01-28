@@ -13,6 +13,10 @@
       url = "github:Gerg-L/spicetify-nix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    nvf = {
+      url = "github:notashelf/nvf";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs =
@@ -21,6 +25,7 @@
       nixpkgs,
       home-manager,
       spicetify-nix,
+      nvf,
       ...
     } @inputs:
     let
@@ -43,6 +48,7 @@
           inherit pkgs;
           modules = [
             ./modules/home-manager/home.nix
+            nvf.homeManagerModules.default
           ];
         };
       };
