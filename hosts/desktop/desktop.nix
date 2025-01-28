@@ -131,7 +131,6 @@
     # $ nix search wget
     environment.systemPackages = with pkgs; [
         alsa-utils
-        neovim
         wget
         git
         spotify
