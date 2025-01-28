@@ -66,7 +66,7 @@ alias nixreb='sudo nixos-rebuild switch --flake'
 alias flakeup='nix flake update'
 alias homereb='home-manager switch --flake'
 alias nixlist='nixos-rebuild list-generations'
-alias nixgarbage='nix-collect-garbage'
+alias nixgarbage='nix store gc'
 alias homelist='home-manager generations'
 alias homegarbage='home-manager remove-generations'
 
