@@ -41,7 +41,7 @@ in {
         "${mod}+Tab" = "exec --no-startup-id rofi -show window";
         "${mod}+Shift+e" = "exec --no-startup-id rofi -show emoji";
         "${mod}+c" = "exec --no-startup-id rofi -show calc";
-        "${mod}+Shift+p" = "exec --no-startup-id ~/.config/rofi/power-menu.sh";
+        "${mod}+Ctrl+Shift+e" = "exec --no-startup-id ~/.config/rofi/power-menu.sh";
 
         # thunar
         "${mod}+e" = "exec thunar";
@@ -102,8 +102,5 @@ in {
         
         # restart i3
         "${mod}+Shift+r" = "restart";
-
-        # exit i3
-        "${mod}+Ctrl+Shift+e" = "exit";
     };
 }
