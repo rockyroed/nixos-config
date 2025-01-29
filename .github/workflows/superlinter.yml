@@ -1,7 +1,9 @@
 ---
 name: Super-linter
 
-on: push
+on:
+  pull_request:
+  push:
 
 permissions:
   contents: read
@@ -11,7 +13,7 @@ jobs:
     name: Super-linter
     runs-on: ubuntu-latest
     steps:
-      - name: Clone repo
+      - name: Checkout
         uses: actions/checkout@v4
 
       - name: Run super-linter
@@ -22,3 +24,14 @@ jobs:
           FILTER_REGEX_EXCLUDE: ^/github/workspace/modules/home-manager/config/firefox/config/chrome/.*\.css$|^/github/workspace/modules/shell/python/github/
           IGNORE_GITIGNORED_FILES: true
           VALIDATE_SHELL_SHFMT: false
+  nix-build:
+    name: Nix build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - uses: cachix/install-nix-action@v30
+        with:
+          github_access_token: ${{ secrets.GITHUB_TOKEN }}
+      - run: nix build
+      - run: nix flake check
