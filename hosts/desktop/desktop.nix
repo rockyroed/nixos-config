@@ -102,6 +102,10 @@
         enableCompletion = false;
     };
 
+    # Enable AppImage run
+    programs.appimage.enable = true;
+    programs.appimage.binfmt = true;
+
     # Allow unfree packages
     nixpkgs.config.allowUnfree = true;
 
