@@ -13,28 +13,44 @@
       url = "github:Gerg-L/spicetify-nix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    nvf = {
+      url = "github:notashelf/nvf";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
-  outputs = { self, nixpkgs, home-manager, spicetify-nix, ... } @inputs :
-  let
-    lib = nixpkgs.lib;
-    system = "x86_64-linux";
-    pkgs = nixpkgs.legacyPackages.${system};
-  in {
-    nixosConfigurations = {
-      roed-nixos = lib.nixosSystem {
-	specialArgs = {inherit inputs;};
-        inherit system;
-	modules = [ ./configuration.nix ];
+  outputs =
+    {
+      self,
+      nixpkgs,
+      home-manager,
+      spicetify-nix,
+      nvf,
+      ...
+    } @inputs:
+    let
+      lib = nixpkgs.lib;
+      system = "x86_64-linux";
+      pkgs = nixpkgs.legacyPackages.${system};
+    in
+    {
+      nixosConfigurations = {
+        desktop = lib.nixosSystem {
+          specialArgs = { inherit inputs; };
+          inherit system;
+          modules = [
+            ./hosts/desktop/desktop.nix
+          ];
+        };
+      };
+      homeConfigurations = {
+        desktop = home-manager.lib.homeManagerConfiguration {
+          inherit pkgs;
+          modules = [
+            ./modules/home-manager/home.nix
+            nvf.homeManagerModules.default
+          ];
+        };
       };
     };
-    homeConfigurations = {
-      roed = home-manager.lib.homeManagerConfiguration {
-	inherit pkgs;
-	modules = [ 
-	  ./home-manager/home.nix
-	];
-      };
-    };
-  };
 }

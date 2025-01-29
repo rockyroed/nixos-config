@@ -1,0 +1,5 @@
+pygobject=3.50.0
+pycairo==1.27.0
+requests==2.32.3
+zc.lockfile==3.0.post1
+python-xlib==0.33
