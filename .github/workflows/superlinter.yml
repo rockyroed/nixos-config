@@ -1,5 +1,4 @@
----
-name: Super-linter
+name: Super-linter and Nix Build
 
 on:
   pull_request:
@@ -24,19 +23,37 @@ jobs:
           FILTER_REGEX_EXCLUDE: ^/github/workspace/modules/home-manager/config/firefox/config/chrome/.*\.css$|^/github/workspace/modules/shell/python/github/
           IGNORE_GITIGNORED_FILES: true
           VALIDATE_SHELL_SHFMT: false
+
   nix-build:
     name: Nix build
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+      
       - name: Install nix action
         uses: cachix/install-nix-action@v27
         with:
           github_access_token: ${{ secrets.GITHUB_TOKEN }}
-      - run: nix build .#nixosConfigurations.desktop.config.system.build.toplevel
-      - run: nix-channel --add https://github.com/nix-community/home-manager/archive/master.tar.gz home-manager
-      - run: nix-channel --update
-      - run: nix-shell '<home-manager>' -A install
-      - run: home-manager build --flake .#desktop
-      - run: nix flake check
+
+      # Set NIX_PATH to ensure nixpkgs is available
+      - name: Set NIX_PATH
+        run: echo "NIX_PATH=nixpkgs=https://github.com/NixOS/nixpkgs/archive/master.tar.gz" >> $GITHUB_ENV
+
+      - name: Add nixpkgs and home-manager channels
+        run: |
+          nix-channel --add https://github.com/NixOS/nixpkgs/archive/master.tar.gz nixpkgs
+          nix-channel --add https://github.com/nix-community/home-manager/archive/master.tar.gz home-manager
+          nix-channel --update
+
+      - name: Run Nix build
+        run: nix build .#nixosConfigurations.desktop.config.system.build.toplevel
+
+      - name: Run home-manager install
+        run: nix-shell '<home-manager>' -A install
+
+      - name: Build home-manager configuration
+        run: home-manager build --flake .#desktop
+
+      - name: Run nix flake check
+        run: nix flake check
