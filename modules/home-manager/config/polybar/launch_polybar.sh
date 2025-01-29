@@ -10,13 +10,12 @@ sleep 1
 
 # Launch Polybar instances
 if type "xrandr"; then
-  MONITOR=HDMI-1 TRAY_POS=HDMI-1 polybar --reload toph &
-  sleep 0.25
-  MONITOR=DP-1 polybar --reload toph &
+     MONITOR=HDMI-1 TRAY_POS=HDMI-1 polybar --reload toph &
+     sleep 0.25
+     MONITOR=DP-1 polybar --reload toph &
 else
-  echo "Fallback: launching Polybar on default monitor"
-  MONITOR=default TRAY_POS=$TRAY_POS polybar --reload toph &
+     echo "Fallback: launching Polybar on default monitor"
+     MONITOR=default TRAY_POS=$TRAY_POS polybar --reload toph &
 fi
 
 echo "Bars launched..."
-

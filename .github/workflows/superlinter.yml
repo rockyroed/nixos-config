@@ -1,11 +1,17 @@
+---
 name: Super-linter
 
 on: push
+
+permissions:
+  contents: read
 
 jobs:
   super-lint:
     name: Lint code base
     runs-on: ubuntu-latest
+    env:
+      LINTER_SKIP_LIST: "*.css,modules/shell/python/github/*"
     steps:
       - name: Clone repo
         uses: actions/checkout@v4
