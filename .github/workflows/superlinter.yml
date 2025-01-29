@@ -34,6 +34,6 @@ jobs:
         uses: cachix/install-nix-action@v27
         with:
           github_access_token: ${{ secrets.GITHUB_TOKEN }}
-      - run: nix build .#nixosConfigurations.configname.config.system.build.toplevel
+      - run: nix build .#nixosConfigurations.desktop.config.system.build.toplevel
       - run: home-manager build --flake .#desktop
       - run: nix flake check
