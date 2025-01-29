@@ -20,6 +20,7 @@
         grub = {
             efiSupport = true;
             device = "nodev";
+            theme = "${pkgs.minimal-grub-theme}";
         };
     };
 
