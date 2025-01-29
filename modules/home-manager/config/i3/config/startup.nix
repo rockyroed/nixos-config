@@ -38,10 +38,13 @@
             command = "~/.bin/headphone_audio.sh";
             notification = false;
         }
-        {
-            command = "~/.bin/xborders.sh";
-            notification = false;
-        }
+        # Temporarily disable xborders
+        # as it is causing issues when restarting i3
+        # see: https://github.com/lunegh/xborders
+        # {
+        #     command = "~/.bin/xborders.sh";
+        #     notification = false;
+        # }
         {
             command = "autotiling";
             notification = false;

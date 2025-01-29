@@ -20,7 +20,7 @@ in {
                 size = 10.0;
             };
             window = {
-                border = 0;
+                border = 3;
                 titlebar = false;
             };
             gaps = {

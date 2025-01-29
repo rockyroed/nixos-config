@@ -13,6 +13,7 @@ in {
 
         # Hide borders and titlebars
         for_window [class="^.*"] pixel 0
-        for_window [class="^.*"] border pixel 0
+
+        ${builtins.readFile ./gruvbox.conf}
     '';
 }
