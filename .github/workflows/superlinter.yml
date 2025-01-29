@@ -35,5 +35,8 @@ jobs:
         with:
           github_access_token: ${{ secrets.GITHUB_TOKEN }}
       - run: nix build .#nixosConfigurations.desktop.config.system.build.toplevel
+      - run: nix-channel --add https://github.com/nix-community/home-manager/archive/master.tar.gz home-manager
+      - run: nix-channel --update
+      - run: nix-shell '<home-manager>' -A install
       - run: home-manager build --flake .#desktop
       - run: nix flake check
