@@ -46,7 +46,7 @@ jobs:
           nix-channel --add https://github.com/nix-community/home-manager/archive/master.tar.gz home-manager
           nix-channel --update
 
-      - name: Run Nix build
+      - name: Run nix build
         run: nix build .#nixosConfigurations.desktop.config.system.build.toplevel
 
       - name: Run home-manager install
