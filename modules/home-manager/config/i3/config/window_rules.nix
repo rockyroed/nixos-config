@@ -34,6 +34,14 @@ in {
                 { window_type = "dialog"; }
                 { window_type = "menu"; }
                 { class = "kcalc"; }
+                { 
+                    class = "firefox";
+                    title = "Sign in - Google Accounts";
+                }
+                { 
+                    class = "firefox";
+                    title = "Mag-sign in - Google Accounts";
+                }
             ];
         };
     };
