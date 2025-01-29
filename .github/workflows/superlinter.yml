@@ -10,8 +10,6 @@ jobs:
   super-lint:
     name: Lint code base
     runs-on: ubuntu-latest
-    env:
-      LINTER_SKIP_LIST: "*.css,modules/shell/python/github/*"
     steps:
       - name: Clone repo
         uses: actions/checkout@v4
@@ -21,3 +19,5 @@ jobs:
         env:
           DEFAULT_BRANCH: main
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          FILTER_REGEX_EXCLUDE: ^modules/home-manager/config/firefox/config/chrome/.*\.css$|^modules/shell/python/github/
+          IGNORE_GITIGNORED_FILES: true
