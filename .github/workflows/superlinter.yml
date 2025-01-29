@@ -30,8 +30,12 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-      - uses: cachix/install-nix-action@v27
+      - name: Install nix action
+        uses: cachix/install-nix-action@v27
+      - name: Install home-manager action
+        uses: nix-community/home-manager-action@v3
         with:
           github_access_token: ${{ secrets.GITHUB_TOKEN }}
-      - run: nix build
+      - run: nix build .#nixosConfigurations.configname.config.system.build.toplevel
+      - run: home-manager build --flake .#desktop
       - run: nix flake check
