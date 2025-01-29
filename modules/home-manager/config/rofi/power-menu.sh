@@ -1,10 +1,9 @@
 #!/run/current-system/sw/bin/bash
 # Power menu options
-# TODO: Make options searchable on lowercase input
 options="Shutdown\nReboot\nLog Out\nLock\nSuspend\nHibernate\nCancel"
 
 # Show options in Rofi
-chosen=$(echo -e "$options" | rofi -dmenu -p "Power Menu" -theme-str '@import "gruvbox-material"')
+chosen=$(echo -e "$options" | rofi -dmenu -i -p "Power Menu" -theme-str '@import "gruvbox-material"')
 
 case "$chosen" in
 "Shutdown")
