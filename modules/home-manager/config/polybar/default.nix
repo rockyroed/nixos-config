@@ -5,6 +5,10 @@
         ./config/default.nix
     ];
 
+    home.packages = with pkgs; [
+        pavucontrol
+    ];
+
     services.polybar = {
         enable = true;
         
