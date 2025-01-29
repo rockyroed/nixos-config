@@ -19,7 +19,7 @@
             notification = false;
         }
         {
-            command = "~/AppImages/filen.AppImage";
+            command = "~/.AppImage/Filen.AppImage";
             notification = false;
         }
         {

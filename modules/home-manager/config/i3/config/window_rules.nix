@@ -42,6 +42,9 @@ in {
                     class = "firefox";
                     title = "Mag-sign in - Google Accounts";
                 }
+                { 
+                    class = "Filen";
+                }
             ];
         };
     };
