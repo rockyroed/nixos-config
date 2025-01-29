@@ -6,8 +6,8 @@
         profiles.roed = {
             name = "roed";
             isDefault = true;
-            userChrome = builtins.readFile ./config/userChrome.css;
-            userContent = builtins.readFile ./config/userContent.css;
+            userChrome = builtins.readFile ./config/chrome/userChrome.css;
+            userContent = builtins.readFile ./config/chrome/userContent.css;
         };
     };
 }
