@@ -30,15 +30,15 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-      
+
       - name: Install nix action
         uses: cachix/install-nix-action@v27
         with:
           github_access_token: ${{ secrets.GITHUB_TOKEN }}
 
-      # Set NIX_PATH to ensure nixpkgs is available
+      # Set NIX_PATH to ensure nixpkgs and home-manager are available
       - name: Set NIX_PATH
-        run: echo "NIX_PATH=nixpkgs=https://github.com/NixOS/nixpkgs/archive/master.tar.gz" >> $GITHUB_ENV
+        run: echo "NIX_PATH=nixpkgs=https://github.com/NixOS/nixpkgs/archive/master.tar.gz:home-manager=https://github.com/nix-community/home-manager/archive/master.tar.gz" >> "$GITHUB_ENV"
 
       - name: Add nixpkgs and home-manager channels
         run: |
@@ -50,7 +50,7 @@ jobs:
         run: nix build .#nixosConfigurations.desktop.config.system.build.toplevel
 
       - name: Run home-manager install
-        run: nix-shell '<home-manager>' -A install
+        run: nix-shell --experimental-features 'flakes' '<home-manager>' -A install
 
       - name: Build home-manager configuration
         run: home-manager build --flake .#desktop
