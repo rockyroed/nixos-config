@@ -8,7 +8,7 @@ permissions:
 
 jobs:
   super-linter:
-    name: Lint code base
+    name: Super-linter
     runs-on: ubuntu-latest
     steps:
       - name: Clone repo
