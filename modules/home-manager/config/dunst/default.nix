@@ -28,7 +28,7 @@ in {
                 font = "FiraCode Nerd Font Mono 10";
                 icon_theme = "Papirus-Dark";
                 enable_recursive_icon_lookup = true;
-                corner_radius = 6;
+                # corner_radius = 6;
 
                 background = "${background}";
                 foreground = "${foreground}";
