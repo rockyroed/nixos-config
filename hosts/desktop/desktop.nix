@@ -113,7 +113,7 @@
     enableCompletion = false;
   };
 
-  # Enable AppImage run
+  # Enable appimage-run
   programs.appimage.enable = true;
   programs.appimage.binfmt = true;
 
