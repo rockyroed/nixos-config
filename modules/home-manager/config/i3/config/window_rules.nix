@@ -1,17 +1,17 @@
 { config, pkgs, ... }:
 
 let
-        mod = config.xsession.windowManager.i3.config.modifier;
-        ws1 = "1";
-        ws2 = "2";
-        ws3 = "3";
-        ws4 = "4";
-        ws5 = "5";
-        ws6 = "6";
-        ws7 = "7";
-        ws8 = "8";
-        ws9 = "9";
-        ws10 = "10";
+    mod = config.xsession.windowManager.i3.config.modifier;
+    ws1 = "1";
+    ws2 = "2";
+    ws3 = "3";
+    ws4 = "4";
+    ws5 = "5";
+    ws6 = "6";
+    ws7 = "7";
+    ws8 = "8";
+    ws9 = "9";
+    ws10 = "10";
 in {
     xsession.windowManager.i3.config = {
         assigns = {
@@ -34,7 +34,8 @@ in {
                 { window_type = "dialog"; }
                 { window_type = "menu"; }
                 { class = "kcalc"; }
-                { 
+                { class = "gnome-calculator"; }
+                {
                     class = "firefox";
                     title = "Sign in - Google Accounts";
                 }
@@ -42,7 +43,11 @@ in {
                     class = "firefox";
                     title = "Mag-sign in - Google Accounts";
                 }
-                { 
+                {
+                    class = "firefox";
+                    title = "Library";
+                }
+                {
                     class = "Filen";
                 }
             ];
