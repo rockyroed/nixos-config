@@ -35,7 +35,7 @@
             notification = false;
         }
         {
-            command = "~/.bin/headphone_audio.sh";
+            command = "xset s 900 dpms 1800 2700 3600";
             notification = false;
         }
         # Temporarily disable xborders
