@@ -23,7 +23,7 @@ in {
                 titlebar = false;
             };
             gaps = {
-                inner = 12;
+                inner = 8;
             };
             floating.modifier = "${mod}";
             bars = [
