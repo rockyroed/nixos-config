@@ -123,6 +123,25 @@
   nix.gc.options = "--delete-older-than 7d";
   nix.settings.auto-optimise-store = true;
 
+  # Home-manager cleanup
+  systemd.timers.homeManagerCleanup = {
+    wantedBy = [ "timers.target" ];
+    partOf = [ "homeManagerCleanup.service" ];
+    timerConfig = {
+      OnCalendar = "daily";
+      Persistent = true;
+    };
+  };
+  systemd.services.homeManagerCleanup = {
+    script = ''
+      /home/roed/.nix-profile/bin/home-manager expire-generations "-7 days"
+    '';
+    serviceConfig = {
+      Type = "oneshot";
+      User = "roed";
+    };
+  };
+
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
