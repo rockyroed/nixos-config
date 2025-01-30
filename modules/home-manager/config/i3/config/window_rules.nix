@@ -40,6 +40,10 @@ in {
                     class = "firefox";
                     title = "Sign in - Google Accounts";
                 }
+                {
+                    class = "firefox";
+                    title = "Sign In - Google Accounts";
+                }
                 { 
                     class = "firefox";
                     title = "Mag-sign in - Google Accounts";
