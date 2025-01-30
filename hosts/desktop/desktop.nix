@@ -109,8 +109,8 @@
 
   # Install zsh
   programs.zsh = {
-      enable = true;
-      enableCompletion = false;
+    enable = true;
+    enableCompletion = false;
   };
 
   # Enable AppImage run
@@ -119,52 +119,6 @@
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
-
-  # # Spicetify
-  # programs.spicetify =
-  #   let
-  #     spicePkgs = inputs.spicetify-nix.legacyPackages.${pkgs.system};
-  #   in
-  #   {
-  #     enable = true;
-  #     enabledExtensions = with spicePkgs.extensions; [
-  #       adblock
-  #       bookmark
-  #       keyboardShortcut
-  #       playNext
-  #       hidePodcasts
-  #       beautifulLyrics
-  #       shuffle # shuffle+ (special characters are sanitized out of extension names)
-  #     ];
-  #     theme = spicePkgs.themes.text;
-  #     colorScheme = "Gruvbox";
-  #   };
-  
-  # environment.systemPackages = with pkgs; [
-  #   alsa-utils
-  #   wget
-  #   git
-  #   spotify
-  #   haskellPackages.greenclip
-  #   eza
-  #   vivid
-  #   nerd-fonts.jetbrains-mono
-  #   pulseaudio
-  #   killall
-  #   xfce.thunar
-  #   autotiling
-  #   xborders
-  #   feh
-  #   betterlockscreen
-  #   obs-studio
-  #   signal-desktop
-  #   vscode
-  #   vesktop
-  #   proton-pass
-  #   libnotify
-  #   gimp
-  #   libreoffice
-  # ];
 
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions

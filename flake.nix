@@ -27,7 +27,7 @@
       spicetify-nix,
       nvf,
       ...
-    } @inputs:
+    }@inputs:
     let
       lib = nixpkgs.lib;
       system = "x86_64-linux";
@@ -46,12 +46,12 @@
       homeConfigurations = {
         desktop = home-manager.lib.homeManagerConfiguration {
           inherit pkgs;
+          extraSpecialArgs = { inherit inputs; };
           modules = [
             ./modules/home-manager/home.nix
             nvf.homeManagerModules.default
             inputs.spicetify-nix.homeManagerModules.default
           ];
-          extraSpecialArgs = { inherit inputs; };
         };
       };
     };
