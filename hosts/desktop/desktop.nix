@@ -117,6 +117,12 @@
   programs.appimage.enable = true;
   programs.appimage.binfmt = true;
 
+  # Automatic cleanup
+  nix.gc.automatic = true;
+  nix.gc.dates = "daily";
+  nix.gc.options = "--delete-older-than 7d";
+  nix.settings.auto-optimise-store = true;
+
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
