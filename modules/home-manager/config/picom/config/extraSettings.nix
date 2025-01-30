@@ -14,12 +14,6 @@
                 "role = 'xborder'"
             ];
 
-            # corner-radius = 6;
-            # rounded-corners-exclude = [
-            #     "window_type = 'dock'"
-            #     "window_type = 'desktop'"
-            # ];
-
             frame-opacity = 1;
             inactive-opacity-override = false;
         };
