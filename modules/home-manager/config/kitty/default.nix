@@ -1,6 +1,10 @@
 { config, pkgs, ... }:
 
 {
+    home.packages = with pkgs; [
+        kitty-themes
+    ];
+
     programs.kitty = {
         enable = true;
         font = {
@@ -10,11 +14,7 @@
         settings = {
             enable_audio_bell = false;
             window_padding_width = 6;
-            include = "gruvbox-material-dark-medium.conf";
         };
-    };
-
-    home.file = {
-        ".config/kitty/gruvbox-material-dark-medium.conf".source = ./gruvbox-material-dark-medium.conf;
+        themeFile = "GruvboxMaterialDarkMedium";
     };
 }
