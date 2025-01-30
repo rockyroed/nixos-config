@@ -65,6 +65,7 @@
     cbonsai
     aalib
     tty-clock
+    brave
   ];
 
   # Gtk
