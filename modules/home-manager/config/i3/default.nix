@@ -5,6 +5,10 @@
         ./config/default.nix
     ];
 
+    home.packages = with pkgs; [
+        xdotool
+    ];
+
     xsession.windowManager.i3.enable = true;
 
     home.file = {
