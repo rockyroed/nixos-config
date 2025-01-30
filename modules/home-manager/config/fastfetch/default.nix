@@ -25,7 +25,7 @@
                 }
                 {
                     type = "title";
-                    key = "  ╭─  ";
+                    key = "  ┌─  ";
                 }
                 {
                     type = "os";
@@ -41,7 +41,7 @@
                 }
                 {
                     type = "shell";
-                    key = "  ╰─  ";
+                    key = "  └─  ";
                 }
                 {
                     type = "custom";
@@ -50,7 +50,7 @@
                 }
                 {
                     type = "display";
-                    key = "  ╭─ 󰍹 ";
+                    key = "  ┌─ 󰍹 ";
                     compactType = "original-with-refresh-rate";
                 }
                 {
@@ -63,7 +63,7 @@
                 }
                 {
                     type = "memory";
-                    key = "  ╰─  ";
+                    key = "  └─  ";
                 }
                 {
                     type = "custom";
@@ -72,7 +72,7 @@
                 }
                 {
                     type = "wm";
-                    key = "  ╭─  ";
+                    key = "  ┌─  ";
                 }
                 {
                     type = "terminal";
@@ -80,7 +80,7 @@
                 }
                 {
                     type = "icons";
-                    key = "  ╰─ 󰈹 ";
+                    key = "  └─ 󰈹 ";
                 }
                 {
                     type = "custom";
