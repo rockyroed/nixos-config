@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ config, pkgs, inputs, ... }:
 
 {
   imports = [
@@ -28,34 +28,34 @@
   home.username = "roed";
   home.homeDirectory = "/home/roed";
 
-  # This value determines the Home Manager release that your configuration is
-  # compatible with. This helps avoid breakage when a new Home Manager release
-  # introduces backwards incompatible changes.
-  #
-  # You should not change this value, even if you update Home Manager. If you do
-  # want to update the value, then make sure to first check the Home Manager
-  # release notes.
-  home.stateVersion = "24.11"; # Please read the comment before changing.
+  # Allow unfree packages
+  nixpkgs.config.allowUnfree = true;
 
-  # Home Manager can also manage your environment variables through
-  #  "home.sessionVariables";. These will be explicitly sourced when using a
-  # shell provided by Home Manager. If you don "t want to manage your shell
-  # through Home Manager then you have to manually source  "hm-session-vars.sh";
-  # located at either
-  #
-  #  ~/.nix-profile/etc/profile.d/hm-session-vars.sh
-  #
-  # or
-  #
-  #  ~/.local/state/nix/profiles/profile/etc/profile.d/hm-session-vars.sh
-  #
-  # or
-  #
-  #  /etc/profiles/per-user/roed/etc/profile.d/hm-session-vars.sh
-  #
-  home.sessionVariables = {
-    # EDITOR = "emacs";
-  };
+  # User packages
+  home.packages = with pkgs; [
+    alsa-utils
+    wget
+    git
+    haskellPackages.greenclip
+    eza
+    vivid
+    nerd-fonts.jetbrains-mono
+    pulseaudio
+    killall
+    xfce.thunar
+    autotiling
+    xborders
+    feh
+    betterlockscreen
+    obs-studio
+    signal-desktop
+    vscode
+    vesktop
+    proton-pass
+    libnotify
+    gimp
+    libreoffice
+  ];
 
   # Gtk
   gtk = {
@@ -87,11 +87,11 @@
   # A temporary fix to the flameshot tray.target error
   # https://github.com/nix-community/home-manager/issues/2064#issuecomment-887300055
   systemd.user.targets.tray = {
-		Unit = {
-			Description = "Home Manager System Tray";
-			Requires = [ "graphical-session-pre.target" ];
-		};
-	};
+    Unit = {
+      Description = "Home Manager System Tray";
+      Requires = [ "graphical-session-pre.target" ];
+    };
+  };
 
   # Session variables
   home.sessionVariables = {
@@ -99,7 +99,36 @@
     BROWSER = "firefox";
     TERMINAL = "kitty";
   };
-  
+
+  # Spicetify
+  programs.spicetify =
+    let
+      spicePkgs = inputs.spicetify-nix.legacyPackages.${pkgs.system};
+    in
+    {
+      enable = true;
+      enabledExtensions = with spicePkgs.extensions; [
+        adblock
+        bookmark
+        keyboardShortcut
+        playNext
+        hidePodcasts
+        beautifulLyrics
+        shuffle # shuffle+ (special characters are sanitized out of extension names)
+      ];
+      theme = spicePkgs.themes.text;
+      colorScheme = "Gruvbox";
+    };
+
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
+
+  # This value determines the Home Manager release that your configuration is
+  # compatible with. This helps avoid breakage when a new Home Manager release
+  # introduces backwards incompatible changes.
+  #
+  # You should not change this value, even if you update Home Manager. If you do
+  # want to update the value, then make sure to first check the Home Manager
+  # release notes.
+  home.stateVersion = "24.11"; # Please read the comment before changing.
 }

@@ -49,7 +49,9 @@
           modules = [
             ./modules/home-manager/home.nix
             nvf.homeManagerModules.default
+            inputs.spicetify-nix.homeManagerModules.default
           ];
+          extraSpecialArgs = { inherit inputs; };
         };
       };
     };
