@@ -61,6 +61,10 @@
     libnotify
     gimp
     libreoffice
+    pipes
+    cbonsai
+    aalib
+    tty-clock
   ];
 
   # Gtk
