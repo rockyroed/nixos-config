@@ -35,6 +35,7 @@ in {
                 { window_type = "menu"; }
                 { class = "kcalc"; }
                 { class = "gnome-calculator"; }
+                { class = "pavucontrol"; }
                 {
                     class = "firefox";
                     title = "Sign in - Google Accounts";
