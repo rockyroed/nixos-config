@@ -95,28 +95,28 @@ in
     "${mod}+Shift+space" = "floating toggle";
 
     # switch to workspace
-    "${mod}+${ws1}" = "workspace number ${ws1}, exec ${centerMouse}";
-    "${mod}+${ws2}" = "workspace number ${ws2}, exec ${centerMouse}";
-    "${mod}+${ws3}" = "workspace number ${ws3}, exec ${centerMouse}";
-    "${mod}+${ws4}" = "workspace number ${ws4}, exec ${centerMouse}";
-    "${mod}+${ws5}" = "workspace number ${ws5}, exec ${centerMouse}";
-    "${mod}+${ws6}" = "workspace number ${ws6}, exec ${centerMouse}";
-    "${mod}+${ws7}" = "workspace number ${ws7}, exec ${centerMouse}";
-    "${mod}+${ws8}" = "workspace number ${ws8}, exec ${centerMouse}";
-    "${mod}+${ws9}" = "workspace number ${ws9}, exec ${centerMouse}";
-    "${mod}+0" = "workspace number ${ws10}, exec ${centerMouse}";
+    "${mod}+${ws1}" = "workspace number ${ws1}";
+    "${mod}+${ws2}" = "workspace number ${ws2}";
+    "${mod}+${ws3}" = "workspace number ${ws3}";
+    "${mod}+${ws4}" = "workspace number ${ws4}";
+    "${mod}+${ws5}" = "workspace number ${ws5}";
+    "${mod}+${ws6}" = "workspace number ${ws6}";
+    "${mod}+${ws7}" = "workspace number ${ws7}";
+    "${mod}+${ws8}" = "workspace number ${ws8}";
+    "${mod}+${ws9}" = "workspace number ${ws9}";
+    "${mod}+0" = "workspace number ${ws10}";
 
     # move focused container to workspace
-    "${mod}+Shift+${ws1}" = "move container to workspace number ${ws1}, exec ${centerMouse}";
-    "${mod}+Shift+${ws2}" = "move container to workspace number ${ws2}, exec ${centerMouse}";
-    "${mod}+Shift+${ws3}" = "move container to workspace number ${ws3}, exec ${centerMouse}";
-    "${mod}+Shift+${ws4}" = "move container to workspace number ${ws4}, exec ${centerMouse}";
-    "${mod}+Shift+${ws5}" = "move container to workspace number ${ws5}, exec ${centerMouse}";
-    "${mod}+Shift+${ws6}" = "move container to workspace number ${ws6}, exec ${centerMouse}";
-    "${mod}+Shift+${ws7}" = "move container to workspace number ${ws7}, exec ${centerMouse}";
-    "${mod}+Shift+${ws8}" = "move container to workspace number ${ws8}, exec ${centerMouse}";
-    "${mod}+Shift+${ws9}" = "move container to workspace number ${ws9}, exec ${centerMouse}";
-    "${mod}+Shift+0" = "move container to workspace number ${ws10}, exec ${centerMouse}";
+    "${mod}+Shift+${ws1}" = "move container to workspace number ${ws1}";
+    "${mod}+Shift+${ws2}" = "move container to workspace number ${ws2}";
+    "${mod}+Shift+${ws3}" = "move container to workspace number ${ws3}";
+    "${mod}+Shift+${ws4}" = "move container to workspace number ${ws4}";
+    "${mod}+Shift+${ws5}" = "move container to workspace number ${ws5}";
+    "${mod}+Shift+${ws6}" = "move container to workspace number ${ws6}";
+    "${mod}+Shift+${ws7}" = "move container to workspace number ${ws7}";
+    "${mod}+Shift+${ws8}" = "move container to workspace number ${ws8}";
+    "${mod}+Shift+${ws9}" = "move container to workspace number ${ws9}";
+    "${mod}+Shift+0" = "move container to workspace number ${ws10}";
 
     # restart i3
     "${mod}+Shift+r" = "restart";
