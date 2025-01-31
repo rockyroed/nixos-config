@@ -71,22 +71,22 @@ in
     "${mod}+Shift+s" = "exec ~/.bin/spotify_cava.sh";
 
     # change focus
-    "${mod}+h" = "focus left, exec ${centerMouse}";
-    "${mod}+j" = "focus down, exec ${centerMouse}";
-    "${mod}+k" = "focus up, exec ${centerMouse}";
-    "${mod}+l" = "focus right, exec ${centerMouse}";
+    "${mod}+h" = "focus left; exec --no-startup-id ${centerMouse}";
+    "${mod}+j" = "focus down, exec --no-startup-id ${centerMouse}";
+    "${mod}+k" = "focus up, exec --no-startup-id ${centerMouse}";
+    "${mod}+l" = "focus right, exec --no-startup-id ${centerMouse}";
 
     # move focused window
-    "${mod}+Shift+h" = "move left, exec ${centerMouse}";
-    "${mod}+Shift+j" = "move down, exec ${centerMouse}";
-    "${mod}+Shift+k" = "move up, exec ${centerMouse}";
-    "${mod}+Shift+l" = "move right, exec ${centerMouse}";
+    "${mod}+Shift+h" = "move left, exec --no-startup-id ${centerMouse}";
+    "${mod}+Shift+j" = "move down, exec --no-startup-id ${centerMouse}";
+    "${mod}+Shift+k" = "move up, exec --no-startup-id ${centerMouse}";
+    "${mod}+Shift+l" = "move right, exec --no-startup-id ${centerMouse}";
 
     # alternatively, you can use the cursor keys:
-    "${mod}+Left" = "focus left, exec ${centerMouse}";
-    "${mod}+Down" = "focus down, exec ${centerMouse}";
-    "${mod}+Up" = "focus up, exec ${centerMouse}";
-    "${mod}+Right" = "focus right, exec ${centerMouse}";
+    "${mod}+Left" = "focus left, exec --no-startup-id ${centerMouse}";
+    "${mod}+Down" = "focus down, exec --no-startup-id ${centerMouse}";
+    "${mod}+Up" = "focus up, exec --no-startup-id ${centerMouse}";
+    "${mod}+Right" = "focus right, exec --no-startup-id ${centerMouse}";
 
     # fullscreen mode
     "${mod}+Shift+f" = "fullscreen toggle";
