@@ -65,6 +65,9 @@ in
     # clipboard
     "${mod}+v" = "exec --no-startup-id rofi -modi \"clipboard:greenclip print\" -show clipboard -run-command '{cmd}'";
 
+    # Toggle screen timeout
+    "${mod}+Shift+t" = "exec --no-startup-id ~/.bin/toggle_screen_timeout.sh";
+
     # spotify and cava
     "${mod}+s" = "exec --no-startup-id spotify";
     "${mod}+Shift+s" = "exec --no-startup-id ~/.bin/spotify_cava.sh";
