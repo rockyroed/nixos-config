@@ -7,7 +7,6 @@
 
 let
   mod = "Mod4";
-  refresh = "killall -SIGUSR1 i3status";
   centerMouse = "~/.bin/center_mouse.sh";
   ws1 = "1";
   ws2 = "2";
@@ -23,12 +22,12 @@ in
 {
   xsession.windowManager.i3.config.keybindings = {
     # volume controls
-    "XF86AudioRaiseVolume" = "exec --no-startup-id ~/.config/i3/volume_up.sh && ${refresh}";
+    "XF86AudioRaiseVolume" = "exec --no-startup-id ~/.config/i3/volume_up.sh &&";
     "XF86AudioLowerVolume" =
-      "exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -5% && ${refresh}";
-    "XF86AudioMute" = "exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && ${refresh}";
+      "exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -5% &&";
+    "XF86AudioMute" = "exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle &&";
     "XF86AudioMicMute" =
-      "exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && ${refresh}";
+      "exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle &&";
 
     # media controls
     "${mod}+p" =
@@ -45,7 +44,7 @@ in
     "${mod}+q" = "kill";
 
     # lock i3
-    "${mod}+Shift+x" = "exec betterlockscreen -l";
+    "${mod}+Shift+x" = "exec --no-startup-id betterlockscreen -l";
 
     # start rofi
     "${mod}+r" = "exec --no-startup-id rofi -show run";
@@ -64,11 +63,11 @@ in
     "Print" = "exec flameshot gui";
 
     # clipboard
-    "${mod}+v" = "exec rofi -modi \"clipboard:greenclip print\" -show clipboard -run-command '{cmd}'";
+    "${mod}+v" = "exec --no-startup-id rofi -modi \"clipboard:greenclip print\" -show clipboard -run-command '{cmd}'";
 
     # spotify and cava
-    "${mod}+s" = "exec spotify";
-    "${mod}+Shift+s" = "exec ~/.bin/spotify_cava.sh";
+    "${mod}+s" = "exec --no-startup-id spotify";
+    "${mod}+Shift+s" = "exec --no-startup-id ~/.bin/spotify_cava.sh";
 
     # change focus
     "${mod}+h" = "focus left; exec --no-startup-id ${centerMouse}";
