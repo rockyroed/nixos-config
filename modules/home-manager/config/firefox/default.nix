@@ -8,6 +8,7 @@
             isDefault = true;
             userChrome = builtins.readFile ./config/chrome/userChrome.css;
             userContent = builtins.readFile ./config/chrome/userContent.css;
+            extraConfig = builtins.readFile ./config/chrome/user.js;
         };
     };
 }
