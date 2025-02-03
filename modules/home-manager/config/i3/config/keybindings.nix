@@ -18,24 +18,25 @@ let
   ws8 = "8";
   ws9 = "9";
   ws10 = "10";
+  refreshi3Status = "killall -SIGUSR1 i3status";
 in
 {
   xsession.windowManager.i3.config.keybindings = {
     # volume controls
-    "XF86AudioRaiseVolume" = "exec --no-startup-id ~/.config/i3/volume_up.sh &&";
+    "XF86AudioRaiseVolume" = "exec --no-startup-id ~/.config/i3/volume_up.sh && ${refreshi3Status}";
     "XF86AudioLowerVolume" =
-      "exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -5% &&";
-    "XF86AudioMute" = "exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle &&";
+      "exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -5% && ${refreshi3Status}";
+    "XF86AudioMute" = "exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && ${refreshi3Status}";
     "XF86AudioMicMute" =
-      "exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle &&";
+      "exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && ${refreshi3Status}";
 
     # media controls
     "${mod}+p" =
       "exec dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.PlayPause &";
     "${mod}+bracketleft" =
-      "exec dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.PlayPause &";
+      "exec dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Previous &";
     "${mod}+bracketright" =
-      "exec dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.PlayPause &";
+      "exec dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Next &";
 
     # terminal
     "${mod}+Return" = "exec kitty";
