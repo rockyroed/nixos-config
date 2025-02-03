@@ -107,5 +107,11 @@ zstyle :compinstall filename '/home/roed/.zshrc'
 autoload -Uz compinit
 compinit
 
+_fix_cursor() {
+   echo -ne '\e[5 q'
+}
+
+precmd_functions+=(_fix_cursor)
+
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
