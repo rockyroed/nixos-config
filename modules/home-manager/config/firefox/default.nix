@@ -1,14 +1,17 @@
 { config, pkgs, ... }:
 
+let
+  readIfExists = path: if builtins.pathExists path then builtins.readFile path else "";
+in
 {
-    programs.firefox = {
-        enable = true;
-        profiles.roed = {
-            name = "roed";
-            isDefault = true;
-            userChrome = builtins.readFile ./config/chrome/userChrome.css;
-            userContent = builtins.readFile ./config/chrome/userContent.css;
-            extraConfig = builtins.readFile ./config/chrome/user.js;
-        };
+  programs.firefox = {
+    enable = true;
+    profiles.roed = {
+      name = "roed";
+      isDefault = true;
+      userChrome = readIfExists ./config/chrome/userChrome.css;
+      userContent = readIfExists ./config/chrome/userContent.css;
+      extraConfig = readIfExists ./config/chrome/user.js;
     };
+  };
 }
