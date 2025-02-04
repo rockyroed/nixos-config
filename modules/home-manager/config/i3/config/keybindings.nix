@@ -45,9 +45,9 @@ in
     "${mod}+q" = "kill";
 
     # lock i3
-    "${mod}+Shift+x" = "exec --no-startup-id betterlockscreen -l";
+    "${mod}+Ctrl+x" = "exec --no-startup-id betterlockscreen -l";
 
-    # start rofi
+    # rofi
     "${mod}+r" = "exec --no-startup-id rofi -show run";
     "${mod}+space" = "exec --no-startup-id rofi -show drun";
     "${mod}+Tab" = "exec --no-startup-id rofi -show window";
@@ -61,13 +61,14 @@ in
     "${mod}+e" = "exec thunar";
 
     # screenshot
+    "${mod}+Shift+p" = "exec flameshot gui";
     "Print" = "exec flameshot gui";
 
     # clipboard
     "${mod}+v" = "exec --no-startup-id rofi -modi \"clipboard:greenclip print\" -show clipboard -run-command '{cmd}'";
 
     # Toggle screen timeout
-    "${mod}+Shift+t" = "exec --no-startup-id ~/.bin/toggle_screen_timeout.sh";
+    "${mod}+Ctrl+t" = "exec --no-startup-id ~/.bin/toggle_screen_timeout.sh";
 
     # spotify and cava
     "${mod}+s" = "exec --no-startup-id spotify";
