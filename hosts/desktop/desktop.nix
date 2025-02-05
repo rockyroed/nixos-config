@@ -120,7 +120,7 @@
   # Automatic cleanup
   nix.gc.automatic = true;
   nix.gc.dates = "daily";
-  nix.gc.options = "--delete-older-than 7d";
+  nix.gc.options = "--delete-older-than 5d";
   nix.settings.auto-optimise-store = true;
 
   # Home-manager cleanup
@@ -134,7 +134,7 @@
   };
   systemd.services.homeManagerCleanup = {
     script = ''
-      /home/roed/.nix-profile/bin/home-manager expire-generations "-7 days"
+      /home/roed/.nix-profile/bin/home-manager expire-generations "-5 days"
     '';
     serviceConfig = {
       Type = "oneshot";
