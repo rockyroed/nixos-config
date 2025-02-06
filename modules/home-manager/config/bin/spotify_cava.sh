@@ -1,4 +1,4 @@
 #!/run/current-system/sw/bin/bash
 spotify &
-sleep 1
+sleep 2
 kitty -e cava &
