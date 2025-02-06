@@ -45,7 +45,7 @@ in
     "${mod}+q" = "kill";
 
     # lock i3
-    "${mod}+Ctrl+x" = "exec --no-startup-id betterlockscreen -l";
+    "${mod}+Ctrl+x" = "exec --no-startup-id betterlockscreen -l dim";
 
     # rofi
     "${mod}+r" = "exec --no-startup-id rofi -show run";

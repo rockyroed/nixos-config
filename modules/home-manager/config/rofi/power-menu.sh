@@ -18,7 +18,7 @@ case "$chosen" in
     ;;
 "Lock")
     # Locks the screen using your preferred method (e.g., i3lock or betterlockscreen)
-    betterlockscreen -l
+    betterlockscreen -l dim
     ;;
 "Suspend")
     systemctl suspend
