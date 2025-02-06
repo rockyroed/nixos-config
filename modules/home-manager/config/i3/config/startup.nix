@@ -35,7 +35,7 @@
             notification = false;
         }
         {
-            command = "xset s 900 dpms 1800 2700 3600";
+            command = "xset s 1800 dpms 2700 3600";
             notification = false;
         }
         # Temporarily disable xborders

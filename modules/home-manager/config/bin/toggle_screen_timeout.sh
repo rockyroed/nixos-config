@@ -8,6 +8,6 @@ if [ "$dpms_status" = "Enabled" ]; then
   dunstify -u normal "Screen Timeout" "Disabled DPMS and screensaver"
 else
   # If DPMS is disabled, turn it on with your preferred settings
-  xset s 900 dpms 1800 2700 3600
+  xset s 1800 dpms 2700 3600
   dunstify -u normal "Screen Timeout" "Enabled DPMS and screensaver"
 fi
