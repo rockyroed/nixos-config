@@ -26,7 +26,7 @@
     ./config/xborders/default.nix
     ./config/nvim/default.nix
     ./config/firefox/default.nix
-    ./config/lock/default.nix
+    ./config/betterlockscreen/default.nix
   ];
 
   # Home Manager needs a bit of information about you and the paths it should
@@ -52,7 +52,6 @@
     autotiling
     xborders
     feh
-    betterlockscreen
     obs-studio
     signal-desktop
     vscode
