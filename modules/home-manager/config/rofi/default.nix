@@ -28,7 +28,7 @@
     };
 
     home.file = {
-        ".config/rofi/gruvbox-material.rasi".source = ./gruvbox-material.rasi;
-        ".config/rofi/power-menu.sh".source = ./power-menu.sh;
+        ".config/rofi/gruvbox-material.rasi".source = ./config/gruvbox-material.rasi;
+        ".config/rofi/power-menu.sh".source = ./config/power-menu.sh;
     };
 }

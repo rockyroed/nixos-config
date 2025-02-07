@@ -2,7 +2,7 @@
 
 {
     imports = [
-        ./config/default.nix
+        ./nix/general.nix
     ];
 
     home.packages = with pkgs; [
@@ -12,6 +12,6 @@
     xsession.windowManager.i3.enable = true;
 
     home.file = {
-        ".config/i3/volume_up.sh".source = ./volume_up.sh;
+        ".config/i3/volume_up.sh".source = ./config/volume_up.sh;
     };
 }

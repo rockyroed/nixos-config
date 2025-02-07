@@ -8,7 +8,7 @@ in {
         ./cursor.nix
         ./keybindings.nix
         ./workspaces.nix
-        ./window_rules.nix
+        ./windowRules.nix
         ./extraConfig.nix
     ];
 

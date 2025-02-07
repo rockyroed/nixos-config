@@ -2,6 +2,6 @@
 
 {
     home.file = {
-        ".config/greenclip/greenclip.toml".source = ./greenclip.toml;
+        ".config/greenclip/greenclip.toml".source = ./config/greenclip.toml;
     };
 }

@@ -2,6 +2,6 @@
 
 {
     home.file = {
-        ".zshrc".source = ./.zshrc;
+        ".zshrc".source = ./config/.zshrc;
     };
 }

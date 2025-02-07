@@ -2,7 +2,7 @@
 
 {
     imports = [
-        ./config/default.nix
+        ./nix/general.nix
     ];
 
     services.picom = {

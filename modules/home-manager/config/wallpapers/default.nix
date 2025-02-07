@@ -2,7 +2,7 @@
 
 {
     home.file = {
-        ".wallpapers/gruv-limits.png".source = ./gruv-limits.png;
-        ".wallpapers/this-wallpaper-is-not-available.png".source = ./this-wallpaper-is-not-available.png;
+        ".wallpapers/gruv-limits.png".source = ./images/gruv-limits.png;
+        ".wallpapers/this-wallpaper-is-not-available.png".source = ./images/this-wallpaper-is-not-available.png;
     };
 }

@@ -17,6 +17,6 @@ in {
         # Move cava to workspace 8
         for_window [class="kitty" title="cava"] move to workspace ${ws8}, resize set width 400px
 
-        ${builtins.readFile ./gruvbox.conf}
+        ${builtins.readFile ../config/gruvbox.conf}
     '';
 }

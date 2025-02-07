@@ -2,7 +2,7 @@
 
 {
     imports = [
-        ./config/default.nix
+        ./nix/default.nix
     ];
 
     home.packages = with pkgs; [
@@ -20,6 +20,6 @@
     };
 
     home.file = {
-        ".config/polybar/launch_polybar.sh".source = ./launch_polybar.sh;
+        ".config/polybar/launch_polybar.sh".source = ./config/launch_polybar.sh;
     };
 }
