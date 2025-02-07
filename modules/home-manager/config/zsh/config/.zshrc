@@ -34,6 +34,7 @@ alias ls='eza --icons -F -H --git'
 alias lsa='eza -alF --icons -F -H --git'
 
 alias c='clear'
+alias x='exit'
 alias v='nvim'
 alias sv='sudo nvim'
 
