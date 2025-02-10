@@ -23,7 +23,7 @@
                 monstercat = "1";
                 waves = "1";
                 noise_reduction = "0";
-            }
+            };
         };
     };
     
