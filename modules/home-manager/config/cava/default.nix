@@ -15,7 +15,7 @@
             };
             input = {
                 method = "ncurses";
-            }
+            };
             output = {
                 channels = "mono";
                 mono_option = "average";
