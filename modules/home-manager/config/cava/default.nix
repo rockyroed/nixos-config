@@ -7,11 +7,11 @@
             color = {
                 gradient = "1";
                 gradient_count = "5";
-                gradient_color_1 = "#a9b665";
-                gradient_color_2 = "#89b482";
-                gradient_color_3 = "#d8a657";
-                gradient_color_4 = "#e78a4e";
-                gradient_color_5 = "#ea6962";
+                gradient_color_1 = "#A9B665";
+                gradient_color_2 = "#89B482";
+                gradient_color_3 = "#D8A657";
+                gradient_color_4 = "#E78A4E";
+                gradient_color_5 = "#EA6962";
             };
             output = {
                 channels = "mono";
