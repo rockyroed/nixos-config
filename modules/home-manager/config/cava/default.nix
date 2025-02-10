@@ -7,14 +7,11 @@
             color = {
                 gradient = "1";
                 gradient_count = "5";
-                gradient_color_1 = "#A9B665";
-                gradient_color_2 = "#89B482";
-                gradient_color_3 = "#D8A657";
-                gradient_color_4 = "#E78A4E";
-                gradient_color_5 = "#EA6962";
-            };
-            input = {
-                method = "ncurses";
+                gradient_color_5 = "'#ddc7a1'";
+                gradient_color_4 = "'#d4be98'";
+                gradient_color_3 = "'#a89984'";
+                gradient_color_2 = "'#7c6f64'";
+                gradient_color_1 = "'#2b2b2b'";
             };
             output = {
                 channels = "mono";
@@ -23,9 +20,7 @@
                 fragment_shader = "bar_spectrum.frag";
             };
             smoothing = {
-                monstercat = "1";
-                waves = "1";
-                noise_reduction = "0";
+                noise_reduction = "25";
             };
         };
     };
