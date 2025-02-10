@@ -13,6 +13,9 @@
                 gradient_color_4 = "#E78A4E";
                 gradient_color_5 = "#EA6962";
             };
+            input = {
+                method = "ncurses";
+            }
             output = {
                 channels = "mono";
                 mono_option = "average";
