@@ -56,9 +56,9 @@
     LC_TIME = "en_PH.UTF-8";
   };
 
-  # Enable the GNOME Desktop Environment.
-  services.xserver.displayManager.gdm.enable = true;
-  services.xserver.desktopManager.gnome.enable = true;
+  # Enable the KDE Desktop Environment.
+  services.xserver.displayManager.sddm.enable = true;
+  services.xserver.desktopManager.plasma6.enable = true;
 
   # Enable x11 and i3
   services.xserver.enable = true;
