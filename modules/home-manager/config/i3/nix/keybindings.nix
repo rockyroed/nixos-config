@@ -1,11 +1,4 @@
-{
-  config,
-  lib,
-  pkgs,
-  ...
-}:
-
-let
+{...}: let
   mod = "Mod4";
   centerMouse = "~/.bin/center_mouse.sh";
   ws1 = "1";
@@ -19,24 +12,18 @@ let
   ws9 = "9";
   ws10 = "10";
   refreshi3Status = "killall -SIGUSR1 i3status";
-in
-{
+in {
   xsession.windowManager.i3.config.keybindings = {
     # volume controls
     "XF86AudioRaiseVolume" = "exec --no-startup-id ~/.config/i3/volume_up.sh && ${refreshi3Status}";
-    "XF86AudioLowerVolume" =
-      "exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -5% && ${refreshi3Status}";
+    "XF86AudioLowerVolume" = "exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -5% && ${refreshi3Status}";
     "XF86AudioMute" = "exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && ${refreshi3Status}";
-    "XF86AudioMicMute" =
-      "exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && ${refreshi3Status}";
+    "XF86AudioMicMute" = "exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && ${refreshi3Status}";
 
     # media controls
-    "${mod}+p" =
-      "exec dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.PlayPause &";
-    "${mod}+bracketleft" =
-      "exec dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Previous &";
-    "${mod}+bracketright" =
-      "exec dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Next &";
+    "${mod}+p" = "exec dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.PlayPause &";
+    "${mod}+bracketleft" = "exec dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Previous &";
+    "${mod}+bracketright" = "exec dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Next &";
 
     # terminal
     "${mod}+Return" = "exec kitty";
@@ -57,9 +44,6 @@ in
 
     "${mod}+c" = "exec --no-startup-id ${centerMouse}";
 
-    # thunar
-    "${mod}+e" = "exec thunar";
-
     # screenshot
     "${mod}+Shift+p" = "exec flameshot gui";
     "Print" = "exec flameshot gui";
@@ -69,10 +53,6 @@ in
 
     # Toggle screen timeout
     "${mod}+Ctrl+t" = "exec --no-startup-id ~/.bin/toggle_screen_timeout.sh";
-
-    # spotify and cava
-    "${mod}+s" = "exec --no-startup-id spotify";
-    "${mod}+Shift+s" = "exec --no-startup-id ~/.bin/spotify_cava.sh";
 
     # change focus
     "${mod}+h" = "focus left; exec --no-startup-id ${centerMouse}";
@@ -93,10 +73,10 @@ in
     "${mod}+Right" = "focus right, exec --no-startup-id ${centerMouse}";
 
     # fullscreen mode
-    "${mod}+Shift+f" = "fullscreen toggle";
+    "${mod}+Ctrl+f" = "fullscreen toggle";
 
     # floating mode
-    "${mod}+Shift+space" = "floating toggle";
+    "${mod}+Ctrl+space" = "floating toggle";
 
     # switch to workspace
     "${mod}+${ws1}" = "workspace number ${ws1}";
