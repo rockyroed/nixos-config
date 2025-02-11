@@ -24,6 +24,7 @@
     ./config/nvim/default.nix
     ./config/firefox/default.nix
     ./config/betterlockscreen/default.nix
+    ./config/sioyek/default.nix
   ];
 
   # Home Manager needs a bit of information about you and the paths it should
@@ -62,7 +63,6 @@
     aalib
     tty-clock
     brave
-    sioyek
     thunderbird
     nixd
     alejandra
@@ -125,6 +125,11 @@
     BROWSER = "firefox";
     TERMINAL = "kitty";
   };
+
+  # Nix path
+  nix.nixPath = [
+    "nixpkgs=${inputs.nixpkgs}"
+  ];
 
   # Spicetify
   programs.spicetify = let
