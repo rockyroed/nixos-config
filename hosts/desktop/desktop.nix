@@ -1,15 +1,7 @@
 # Edit this configuration file to define what should be installed on
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
-
-{
-  config,
-  pkgs,
-  inputs,
-  ...
-}:
-
-{
+{pkgs, ...}: {
   imports = [
     ./hardware-configuration.nix
     # inputs.spicetify-nix.nixosModules.default
@@ -117,6 +109,16 @@
   programs.appimage.enable = true;
   programs.appimage.binfmt = true;
 
+  # Davinci Resolve Intel compatibility
+  # hardware.graphics = {
+  #   enable = true;
+  #   enable32Bit = true;
+  #   extraPackages = with pkgs; [
+  #     intel-compute-runtime
+  #     rocmPackages.clr.icd
+  #   ];
+  # };
+
   # Automatic cleanup
   nix.gc.automatic = true;
   nix.gc.dates = "daily";
@@ -125,8 +127,8 @@
 
   # Home-manager cleanup
   systemd.timers.homeManagerCleanup = {
-    wantedBy = [ "timers.target" ];
-    partOf = [ "homeManagerCleanup.service" ];
+    wantedBy = ["timers.target"];
+    partOf = ["homeManagerCleanup.service"];
     timerConfig = {
       OnCalendar = "daily";
       Persistent = true;

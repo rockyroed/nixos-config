@@ -66,6 +66,7 @@
     thunderbird
     nixd
     alejandra
+    # davinci-resolve
   ];
 
   # Default applications
