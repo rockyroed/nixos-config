@@ -19,40 +19,35 @@
     };
   };
 
-  outputs =
-    {
-      self,
-      nixpkgs,
-      home-manager,
-      spicetify-nix,
-      nvf,
-      ...
-    }@inputs:
-    let
-      lib = nixpkgs.lib;
-      system = "x86_64-linux";
-      pkgs = nixpkgs.legacyPackages.${system};
-    in
-    {
-      nixosConfigurations = {
-        desktop = lib.nixosSystem {
-          specialArgs = { inherit inputs; };
-          inherit system;
-          modules = [
-            ./hosts/desktop/desktop.nix
-          ];
-        };
-      };
-      homeConfigurations = {
-        desktop = home-manager.lib.homeManagerConfiguration {
-          inherit pkgs;
-          extraSpecialArgs = { inherit inputs; };
-          modules = [
-            ./modules/home-manager/home.nix
-            nvf.homeManagerModules.default
-            inputs.spicetify-nix.homeManagerModules.default
-          ];
-        };
+  outputs = {
+    nixpkgs,
+    home-manager,
+    nvf,
+    ...
+  } @ inputs: let
+    lib = nixpkgs.lib;
+    system = "x86_64-linux";
+    pkgs = nixpkgs.legacyPackages.${system};
+  in {
+    nixosConfigurations = {
+      desktop = lib.nixosSystem {
+        specialArgs = {inherit inputs;};
+        inherit system;
+        modules = [
+          ./hosts/desktop/desktop.nix
+        ];
       };
     };
+    homeConfigurations = {
+      desktop = home-manager.lib.homeManagerConfiguration {
+        inherit pkgs;
+        extraSpecialArgs = {inherit inputs;};
+        modules = [
+          ./modules/home-manager/home.nix
+          nvf.homeManagerModules.default
+          inputs.spicetify-nix.homeManagerModules.default
+        ];
+      };
+    };
+  };
 }
