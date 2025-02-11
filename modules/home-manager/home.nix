@@ -1,11 +1,8 @@
 {
-  config,
   pkgs,
   inputs,
   ...
-}:
-
-{
+}: {
   imports = [
     ./config/bat/default.nix
     ./config/bin/default.nix
@@ -65,7 +62,26 @@
     aalib
     tty-clock
     brave
+    sioyek
+    thunderbird
+    nixd
+    alejandra
   ];
+
+  # Default applications
+  xdg.mimeApps = {
+    enable = true;
+    defaultApplications = {
+      "text/html" = "firefox.desktop";
+      "text/plain" = "nvim.desktop";
+      "application/pdf" = "sioyek.desktop";
+      "x-scheme-handler/http" = "firefox.desktop";
+      "x-scheme-handler/https" = "firefox.desktop";
+      "x-scheme-handler/mailto" = "thunderbird.desktop";
+      "inode/directory" = "thunar.desktop";
+      "x-scheme-handler/file" = "thunar.desktop";
+    };
+  };
 
   # Gtk
   gtk = {
@@ -99,7 +115,7 @@
   systemd.user.targets.tray = {
     Unit = {
       Description = "Home Manager System Tray";
-      Requires = [ "graphical-session-pre.target" ];
+      Requires = ["graphical-session-pre.target"];
     };
   };
 
@@ -111,24 +127,22 @@
   };
 
   # Spicetify
-  programs.spicetify =
-    let
-      spicePkgs = inputs.spicetify-nix.legacyPackages.${pkgs.system};
-    in
-    {
-      enable = true;
-      enabledExtensions = with spicePkgs.extensions; [
-        adblock
-        bookmark
-        keyboardShortcut
-        playNext
-        hidePodcasts
-        beautifulLyrics
-        shuffle # shuffle+ (special characters are sanitized out of extension names)
-      ];
-      theme = spicePkgs.themes.text;
-      colorScheme = "Gruvbox";
-    };
+  programs.spicetify = let
+    spicePkgs = inputs.spicetify-nix.legacyPackages.${pkgs.system};
+  in {
+    enable = true;
+    enabledExtensions = with spicePkgs.extensions; [
+      adblock
+      bookmark
+      keyboardShortcut
+      playNext
+      hidePodcasts
+      beautifulLyrics
+      shuffle
+    ];
+    theme = spicePkgs.themes.text;
+    colorScheme = "Gruvbox";
+  };
 
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
