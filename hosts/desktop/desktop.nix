@@ -4,7 +4,6 @@
 {pkgs, ...}: {
   imports = [
     ./hardware-configuration.nix
-    # inputs.spicetify-nix.nixosModules.default
   ];
 
   # Bootloader (GRUB).
@@ -56,8 +55,10 @@
     LC_TIME = "en_PH.UTF-8";
   };
 
-  # Enable the KDE Desktop Environment.
+  # Use GDM as the display manager
   services.displayManager.sddm.enable = true;
+
+  # Enable the KDE Desktop Environment
   services.desktopManager.plasma6.enable = true;
 
   # Enable x11 and i3
