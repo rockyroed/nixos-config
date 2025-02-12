@@ -46,7 +46,7 @@ in {
 
     # screenshot
     "${mod}+s" = "exec flameshot gui";
-    "${mod}+Shift+s" = "exec flameshot screen -c";
+    "${mod}+Shift+s" = "exec --no-startup-id flameshot screen -c";
     "Print" = "exec flameshot gui";
 
     # clipboard
