@@ -36,8 +36,10 @@ jobs:
       - name: Run home-manager install
         run: nix-shell --experimental-features 'flakes' '<home-manager>' -A install
 
-      - name: Build home-manager configuration
-        run: home-manager build --flake .#desktop
+      - name: Build home-manager configuration (desktop-roed)
+        run: home-manager build --flake .#desktop-roed
+      - name: Build home-manager configuration (desktop-guest)
+        run: home-manager build --flake .#desktop-guest
 
       - name: Run nix flake check
         run: nix flake check
