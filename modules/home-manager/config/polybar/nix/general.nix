@@ -32,7 +32,7 @@ in {
       module-margin = "0";
 
       font-0 = "JetBrainsMono Nerd Font Mono:size=10;2";
-      font-1 = "JetBrainsMono Nerd Font Propo:size=11;3";
+      font-1 = "JetBrainsMono Nerd Font Propo:size=11;2";
 
       modules-left = "cpu memory fs-nix fs-hdd";
       modules-center = "i3";
