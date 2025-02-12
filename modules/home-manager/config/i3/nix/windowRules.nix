@@ -29,19 +29,6 @@ in {
         {class = "kcalc";}
         {class = "gnome-calculator";}
         {class = "pavucontrol";}
-        #TODO: Remove sign in floating rules
-        {
-          class = "firefox";
-          title = "Sign in - Google Accounts";
-        }
-        {
-          class = "firefox";
-          title = "Sign In - Google Accounts";
-        }
-        {
-          class = "firefox";
-          title = "Mag-sign in - Google Accounts";
-        }
         {
           class = "firefox";
           title = "Library";
