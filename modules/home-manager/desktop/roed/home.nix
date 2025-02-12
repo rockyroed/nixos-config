@@ -4,27 +4,27 @@
   ...
 }: {
   imports = [
-    ./config/bat/default.nix
-    ./config/bin/default.nix
-    ./config/btop/default.nix
-    ./config/cava/default.nix
-    ./config/dunst/default.nix
-    ./config/fastfetch/default.nix
-    ./config/flameshot/default.nix
-    ./config/greenclip/default.nix
-    ./config/i3/default.nix
-    ./config/kitty/default.nix
-    ./config/picom/default.nix
-    ./config/polybar/default.nix
-    ./config/rofi/default.nix
-    ./config/wallpapers/default.nix
-    ./config/zsh/default.nix
-    ./config/redshift/default.nix
-    ./config/xborders/default.nix
-    ./config/nvim/default.nix
-    ./config/firefox/default.nix
-    ./config/betterlockscreen/default.nix
-    ./config/sioyek/default.nix
+    ../../config/bat/default.nix
+    ../../config/bin/default.nix
+    ../../config/btop/default.nix
+    ../../config/cava/default.nix
+    ../../config/dunst/default.nix
+    ../../config/fastfetch/default.nix
+    ../../config/flameshot/default.nix
+    ../../config/greenclip/default.nix
+    ../../config/i3/default.nix
+    ../../config/kitty/default.nix
+    ../../config/picom/default.nix
+    ../../config/polybar/default.nix
+    ../../config/rofi/default.nix
+    ../../config/wallpapers/default.nix
+    ../../config/zsh/default.nix
+    ../../config/redshift/default.nix
+    ../../config/xborders/default.nix
+    ../../config/nvim/default.nix
+    ../../config/firefox/default.nix
+    ../../config/betterlockscreen/default.nix
+    ../../config/sioyek/default.nix
   ];
 
   # Home Manager needs a bit of information about you and the paths it should

@@ -39,13 +39,20 @@
       };
     };
     homeConfigurations = {
-      desktop = home-manager.lib.homeManagerConfiguration {
+      desktop-roed = home-manager.lib.homeManagerConfiguration {
         inherit pkgs;
         extraSpecialArgs = {inherit inputs;};
         modules = [
-          ./modules/home-manager/home.nix
+          ./modules/home-manager/desktop/roed/home.nix
           nvf.homeManagerModules.default
           inputs.spicetify-nix.homeManagerModules.default
+        ];
+      };
+      desktop-guest = home-manager.lib.homeManagerConfiguration {
+        inherit pkgs;
+        extraSpecialArgs = {inherit inputs;};
+        modules = [
+          ./modules/home-manager/desktop/guest/home.nix
         ];
       };
     };

@@ -65,9 +65,7 @@
 
   # Enable x11 and i3
   services.xserver.enable = true;
-  services.xserver.windowManager.i3 = {
-    enable = true;
-  };
+  services.xserver.windowManager.i3.enable = true;
 
   # Configure keymap in X11
   services.xserver.xkb = {
@@ -92,14 +90,26 @@
   security.polkit.enable = true;
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
-  users.users.roed = {
-    isNormalUser = true;
-    description = "roed";
-    extraGroups = [
-      "networkmanager"
-      "wheel"
-    ];
-    shell = pkgs.zsh;
+  users.users = {
+    roed = {
+      isNormalUser = true;
+      description = "roed";
+      extraGroups = [
+        "networkmanager"
+        "wheel"
+      ];
+      shell = pkgs.zsh;
+    };
+    guest = {
+      isNormalUser = true;
+      description = "guest";
+      password = "guest";
+      extraGroups = [
+        "networkmanager"
+        "wheel"
+      ];
+      shell = pkgs.bash;
+    };
   };
 
   # Install zsh
