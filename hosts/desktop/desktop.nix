@@ -56,7 +56,7 @@
   };
 
   # Use GDM as the display manager
-  services.displayManager.gdm.enable = true;
+  services.xserver.displayManager.gdm.enable = true;
   services.displayManager.defaultSession = "i3";
 
   # Enable the KDE Desktop Environment
