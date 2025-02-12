@@ -6,7 +6,7 @@ in {
       type = "internal/cpu";
       interval = "2";
       format-underline = "${yellow}";
-      label = "%{T2} %{T-}%percentage:1%%";
+      label = "%{T2}  %{T-}%percentage:1%% ";
     };
   };
 }

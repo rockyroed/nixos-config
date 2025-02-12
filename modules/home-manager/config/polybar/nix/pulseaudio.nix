@@ -10,13 +10,13 @@ in {
       format-volume-underline = "${aqua}";
       format-muted-underline = "${background-5}";
 
-      ramp-volume-0 = "%{T2}%{T-}";
-      ramp-volume-1 = "%{T2}%{T-}";
-      ramp-volume-2 = "%{T2}%{T-}";
+      ramp-volume-0 = "%{T2} %{T-}";
+      ramp-volume-1 = "%{T2} %{T-}";
+      ramp-volume-2 = "%{T2} %{T-}";
 
       label-volume = "%percentage%%";
 
-      label-muted = "%{T2}%{T-}";
+      label-muted = "%{T2}  %{T-}";
       label-muted-foreground = "${background-5}";
 
       click-right = "pavucontrol";

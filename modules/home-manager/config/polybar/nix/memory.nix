@@ -6,7 +6,7 @@ in {
       type = "internal/memory";
       interval = "2";
       format-underline = "${blue}";
-      label = "%{T2} %{T-}%percentage_used:1%%";
+      label = "%{T2}  %{T-}%percentage_used:1%% ";
     };
   };
 }
