@@ -45,7 +45,8 @@ in {
     "${mod}+c" = "exec --no-startup-id ${centerMouse}";
 
     # screenshot
-    "${mod}+Shift+p" = "exec flameshot gui";
+    "${mod}+s" = "exec flameshot gui";
+    "${mod}+Shift+s" = "exec flameshot screen -c";
     "Print" = "exec flameshot gui";
 
     # clipboard
