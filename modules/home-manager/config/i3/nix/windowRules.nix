@@ -22,6 +22,7 @@ in {
       criteria = [
         {window_role = "pop-up";}
         {window_role = "bubble";}
+        {window_role = "alert";}
         {window_role = "task_dialog";}
         {window_role = "Preferences";}
         {window_type = "dialog";}

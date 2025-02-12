@@ -16,8 +16,7 @@ in {
     # Move cava to workspace 8
     for_window [class="kitty" title="cava"] move to workspace ${ws8}, resize set width 400px
 
-    # Float windows with a window_role of alert
-    for_window [window_role="alert"] floating enable
+    # Don't focus on a window_role of alert
     no_focus [window_role="alert"]
 
     # Launcher mode
