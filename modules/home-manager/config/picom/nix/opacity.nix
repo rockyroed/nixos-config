@@ -10,6 +10,7 @@
       "100:class_g = 'sioyek'"
       "100:class_g = 'Rofi'"
       "100:class_g = 'Gimp-2.10'"
+      "100:class_g = 'obs'"
     ];
   };
 }
