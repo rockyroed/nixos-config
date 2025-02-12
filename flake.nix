@@ -53,6 +53,7 @@
         extraSpecialArgs = {inherit inputs;};
         modules = [
           ./modules/home-manager/desktop/guest/home.nix
+          nvf.homeManagerModules.default
         ];
       };
     };
