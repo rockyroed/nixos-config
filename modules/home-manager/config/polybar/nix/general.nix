@@ -29,7 +29,7 @@ in {
 
       padding-left = "1";
       padding-right = "1";
-      module-margin = "0";
+      module-margin = "1";
 
       font-0 = "JetBrainsMono Nerd Font Mono:size=10;2";
       font-1 = "JetBrainsMono Nerd Font Propo:size=11;2";

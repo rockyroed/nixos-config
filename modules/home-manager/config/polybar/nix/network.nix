@@ -8,7 +8,7 @@ in {
       interval = "5";
       format-connected = "<label-connected>";
       format-disconnected = "<label-disconnected>";
-      label-disconnected = "%{F${background-5}} %ifname%%{F${background-5}} disconnected ";
+      label-disconnected = "%{F${background-5}}%ifname%%{F${background-5}} disconnected";
     };
 
     "module/eth" = {

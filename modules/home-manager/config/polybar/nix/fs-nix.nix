@@ -22,10 +22,10 @@ in {
       format-unmounted = "<label-unmounted>";
       format-warn = "<label-warn>";
 
-      label-mounted = " Nix %percentage_used:1%% ";
-      label-unmounted = " %fsname%: not mounted ";
+      label-mounted = "Nix %percentage_used:2%%";
+      label-unmounted = "%fsname%: not mounted";
       label-unmounted-foreground = "${background-5}";
-      label-warn = " %mountpoint%: %percentage_used:1%% ";
+      label-warn = "%mountpoint%: %percentage_used:2%%";
       label-warn-foreground = "${red}";
     };
   };
