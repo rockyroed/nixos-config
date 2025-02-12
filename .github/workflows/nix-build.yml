@@ -1,4 +1,4 @@
-name: Super-linter and Nix Build
+name: Nix build
 
 on:
   pull_request:
@@ -8,22 +8,6 @@ permissions:
   contents: read
 
 jobs:
-  super-linter:
-    name: Super-linter
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-
-      - name: Run super-linter
-        uses: github/super-linter@v7
-        env:
-          DEFAULT_BRANCH: main
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          FILTER_REGEX_EXCLUDE: ^/github/workspace/modules/home-manager/config/firefox/config/chrome/.*\.css$
-          IGNORE_GITIGNORED_FILES: true
-          VALIDATE_SHELL_SHFMT: false
-
   nix-build:
     name: Nix build
     runs-on: ubuntu-latest
