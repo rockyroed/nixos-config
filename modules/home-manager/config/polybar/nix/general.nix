@@ -36,7 +36,7 @@ in {
 
       modules-left = "cpu memory fs-nix fs-hdd";
       modules-center = "i3";
-      modules-right = "systray pulseaudio eth date";
+      modules-right = "pulseaudio eth date systray";
 
       cursor-click = "pointer";
       enable-ipc = true;
