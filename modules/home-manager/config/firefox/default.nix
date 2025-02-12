@@ -1,9 +1,9 @@
-{ config, pkgs, ... }:
-
-let
-  readIfExists = path: if builtins.pathExists path then builtins.readFile path else "";
-in
-{
+{...}: let
+  readIfExists = path:
+    if builtins.pathExists path
+    then builtins.readFile path
+    else "";
+in {
   programs.firefox = {
     enable = true;
     profiles.roed = {

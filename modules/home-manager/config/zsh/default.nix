@@ -1,7 +1,5 @@
-{ config, pkgs, ... }:
-
-{
-    home.file = {
-        ".zshrc".source = ./config/.zshrc;
-    };
+{...}: {
+  home.file = {
+    ".zshrc".source = ./config/.zshrc;
+  };
 }

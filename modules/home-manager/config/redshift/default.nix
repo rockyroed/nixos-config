@@ -1,16 +1,14 @@
-{ config, pkgs, ... }:
+{...}: {
+  services.redshift = {
+    enable = true;
+    tray = false;
 
-{
-    services.redshift = {
-        enable = true;
-        tray = false;
+    provider = "manual";
+    latitude = 14.61;
+    longitude = 120.99;
 
-        provider = "manual";
-        latitude = 14.61;
-        longitude = 120.99;
-
-        temperature = {
-            night = 2500;
-        };
+    temperature = {
+      night = 2500;
     };
+  };
 }

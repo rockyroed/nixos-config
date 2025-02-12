@@ -1,11 +1,9 @@
-{ config, pkgs, ... }:
+{...}: {
+  imports = [
+    ./nix/general.nix
+  ];
 
-{
-    imports = [
-        ./nix/general.nix
-    ];
-
-    services.picom = {
-        enable = true;
-    };
+  services.picom = {
+    enable = true;
+  };
 }

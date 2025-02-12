@@ -1,10 +1,8 @@
-{ config, pkgs, ... }:
-
-{
-    home.pointerCursor = {
-        x11.enable = true;
-        name = "Bibata-Modern-Ice";
-        package = pkgs.bibata-cursors;
-        size = 16;
-    };
+{pkgs, ...}: {
+  home.pointerCursor = {
+    x11.enable = true;
+    name = "Bibata-Modern-Ice";
+    package = pkgs.bibata-cursors;
+    size = 16;
+  };
 }

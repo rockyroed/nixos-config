@@ -46,8 +46,8 @@ in {
 
     # screenshot
     "${mod}+s" = "exec flameshot gui";
-    "${mod}+Shift+s" = "exec --no-startup-id flameshot screen -c";
     "Print" = "exec flameshot gui";
+    "${mod}+Shift+s" = "exec --no-startup-id flameshot screen -c";
 
     # clipboard
     "${mod}+v" = "exec --no-startup-id rofi -modi \"clipboard:greenclip print\" -show clipboard -run-command '{cmd}'";
