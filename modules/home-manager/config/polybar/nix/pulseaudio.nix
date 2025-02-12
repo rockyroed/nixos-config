@@ -14,7 +14,7 @@ in {
       ramp-volume-1 = "%{T2} %{T-}";
       ramp-volume-2 = "%{T2} %{T-}";
 
-      label-volume = "%percentage%%";
+      label-volume = "%percentage%% ";
 
       label-muted = "%{T2}  %{T-}";
       label-muted-foreground = "${background-5}";
