@@ -26,6 +26,7 @@
     gimp
     libreoffice
     brave
+    firefox
   ];
 
   # Let Home Manager install and manage itself.
