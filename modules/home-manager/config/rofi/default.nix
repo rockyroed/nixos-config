@@ -5,7 +5,7 @@
     extraConfig = {
       icon-theme = "Papirus-Dark";
       modi = "run,drun,window,emoji,calc";
-      show-icons = true; #TODO: Remove this line
+      show-icons = false;
 
       display-ssh = "󰣀 ssh:";
       display-run = "󱓞 run:";
