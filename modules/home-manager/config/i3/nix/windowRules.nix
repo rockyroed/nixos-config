@@ -1,5 +1,6 @@
 {...}: let
   ws1 = "1";
+  ws2 = "2";
   ws3 = "3";
   ws6 = "6";
   ws7 = "7";
@@ -9,6 +10,7 @@ in {
   xsession.windowManager.i3.config = {
     assigns = {
       "${ws1}" = [{class = "firefox";}];
+      "${ws2}" = [{class = "Brave-browser";}];
       "${ws3}" = [{class = "Code";}];
       "${ws6}" = [
         {class = "discord";}
