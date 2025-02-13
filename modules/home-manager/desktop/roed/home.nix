@@ -25,6 +25,7 @@
     ../../config/firefox/default.nix
     ../../config/betterlockscreen/default.nix
     ../../config/sioyek/default.nix
+    ../../config/oh-my-posh/default.nix
   ];
 
   # Home Manager needs a bit of information about you and the paths it should
