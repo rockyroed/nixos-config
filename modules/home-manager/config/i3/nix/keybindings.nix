@@ -74,7 +74,7 @@ in {
     "${mod}+Right" = "focus right, exec --no-startup-id ${centerMouse}";
 
     # fullscreen mode
-    "${mod}+Ctrl+f" = "fullscreen toggle";
+    "${mod}+f" = "fullscreen toggle";
 
     # floating mode
     "${mod}+Ctrl+space" = "floating toggle";
