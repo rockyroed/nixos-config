@@ -19,6 +19,13 @@
           }
         },
         {
+          "type": "nix-shell",
+          "style": "powerline",
+          "foreground": "blue",
+          "background": "transparent",
+          "template": " {{ if and .Type (ne .Type \"unknown\") }}(nix-{{ .Type }}){{ end }}"
+        },
+        {
           "type": "git",
           "style": "plain",
           "foreground": "p:grey",
