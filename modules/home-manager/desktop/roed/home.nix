@@ -141,6 +141,10 @@
     spicePkgs = inputs.spicetify-nix.legacyPackages.${pkgs.system};
   in {
     enable = true;
+    alwaysEnableDevTools = true;
+    experimentalFeatures = true;
+    spotifywmPackage = pkgs.spotifywm;
+    windowManagerPatch = true;
     enabledExtensions = with spicePkgs.extensions; [
       adblock
       bookmark
@@ -150,8 +154,8 @@
       beautifulLyrics
       shuffle
     ];
-    theme = spicePkgs.themes.text;
-    colorScheme = "Gruvbox";
+    theme = spicePkgs.themes.Onepunch;
+    colorScheme = "Dark";
   };
 
   # Let Home Manager install and manage itself.
