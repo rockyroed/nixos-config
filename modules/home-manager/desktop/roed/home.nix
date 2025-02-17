@@ -69,6 +69,7 @@
     nixd
     alejandra
     protonmail-desktop
+    bruno
     # davinci-resolve
   ];
 
