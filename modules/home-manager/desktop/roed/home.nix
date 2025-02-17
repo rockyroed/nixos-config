@@ -68,6 +68,7 @@
     thunderbird
     nixd
     alejandra
+    protonmail-desktop
     # davinci-resolve
   ];
 
