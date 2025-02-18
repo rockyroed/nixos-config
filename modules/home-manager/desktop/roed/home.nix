@@ -154,7 +154,7 @@
       beautifulLyrics
       shuffle
     ];
-    theme = spicePkgs.themes.Onepunch;
+    theme = spicePkgs.themes.onepunch;
     colorScheme = "Dark";
   };
 
