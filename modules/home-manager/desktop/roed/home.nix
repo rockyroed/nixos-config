@@ -154,6 +154,10 @@
       beautifulLyrics
       shuffle
     ];
+    enabledCustomApps = with spicePkgs.apps; [
+      ncsVisualizer
+      betterLibrary
+    ];
     theme = spicePkgs.themes.sleek;
     colorScheme = "Wealthy";
   };
