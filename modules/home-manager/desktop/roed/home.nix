@@ -154,8 +154,8 @@
       beautifulLyrics
       shuffle
     ];
-    theme = spicePkgs.themes.onepunch;
-    colorScheme = "dark";
+    theme = spicePkgs.themes.sleek;
+    colorScheme = "Wealthy";
   };
 
   # Let Home Manager install and manage itself.
