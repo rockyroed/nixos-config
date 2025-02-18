@@ -155,7 +155,7 @@
       shuffle
     ];
     theme = spicePkgs.themes.onepunch;
-    colorScheme = "Dark";
+    colorScheme = "dark";
   };
 
   # Let Home Manager install and manage itself.
