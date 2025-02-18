@@ -14,7 +14,7 @@ in {
     for_window [class="firefox" title="Messenger call — Mozilla Firefox"] move to workspace ${ws7}
 
     # Move cava to workspace 8
-    for_window [class="kitty" title="cava"] move to workspace ${ws8}, resize set width 400px
+    for_window [class="kitty" title="cava"] move to workspace ${ws8}, floating enable, resize set 300 px 169 px, move position 182 ppt 15 ppt
 
     # Don't focus on a window_role of alert
     no_focus [window_role="alert"]
