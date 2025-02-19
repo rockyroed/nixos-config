@@ -59,9 +59,8 @@
   services.xserver.displayManager.gdm.enable = true;
   services.displayManager.defaultSession = "none+i3";
 
-  # Enable the KDE Desktop Environment
-  services.desktopManager.plasma6.enable = true;
-  hardware.graphics.enable = true;
+  # Enable the GNOME Desktop Environment
+  services.xserver.desktopManager.gnome.enable = true;
 
   # Enable x11 and i3
   services.xserver.enable = true;
@@ -118,6 +117,9 @@
     enableCompletion = false;
   };
 
+  # Enable flatpak
+  services.flatpak.enable = true;
+
   # Enable appimage-run
   programs.appimage.enable = true;
   programs.appimage.binfmt = true;
@@ -147,6 +149,7 @@
       Persistent = true;
     };
   };
+
   systemd.services.homeManagerCleanup = {
     script = ''
       /home/roed/.nix-profile/bin/home-manager expire-generations "-5 days"
