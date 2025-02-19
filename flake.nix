@@ -17,12 +17,16 @@
       url = "github:notashelf/nvf";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    nixcord = {
+      url = "github:kaylorben/nixcord";
+    };
   };
 
   outputs = {
     nixpkgs,
     home-manager,
     nvf,
+    nixcord,
     ...
   } @ inputs: let
     lib = nixpkgs.lib;
@@ -54,6 +58,7 @@
         modules = [
           ./modules/home-manager/desktop/guest/home.nix
           nvf.homeManagerModules.default
+          nixcord.homeManagerModules.nixcord
         ];
       };
     };
