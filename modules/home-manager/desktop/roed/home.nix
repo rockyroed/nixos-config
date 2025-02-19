@@ -55,7 +55,7 @@
     obs-studio
     signal-desktop
     vscode
-    vesktop
+    # vesktop
     proton-pass
     libnotify
     gimp
