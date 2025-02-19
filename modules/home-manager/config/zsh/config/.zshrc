@@ -71,6 +71,8 @@ alias nixlist='nixos-rebuild list-generations'
 alias nixgarbage='nix store gc'
 alias homelist='home-manager generations'
 alias homegarbage='home-manager remove-generations'
+alias devflakeadd='git add -f flake.nix flake.lock'
+alias devflakereset='git reset flake.nix flake.lock'
 
 # Lines configured by zsh-newuser-install
 HISTFILE=~/.histfile
