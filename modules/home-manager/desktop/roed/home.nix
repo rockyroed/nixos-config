@@ -27,6 +27,7 @@
     ../../config/sioyek/default.nix
     ../../config/oh-my-posh/default.nix
     ../../config/desktop-entry/default.nix
+    ../../config/nixcord/default.nix
   ];
 
   # Home Manager needs a bit of information about you and the paths it should
@@ -55,7 +56,6 @@
     obs-studio
     signal-desktop
     vscode
-    # vesktop
     proton-pass
     libnotify
     gimp
