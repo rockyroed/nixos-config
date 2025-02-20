@@ -27,6 +27,7 @@
     home-manager,
     nvf,
     nixcord,
+    spicetify-nix,
     ...
   } @ inputs: let
     lib = nixpkgs.lib;
@@ -49,7 +50,8 @@
         modules = [
           ./modules/home-manager/desktop/roed/home.nix
           nvf.homeManagerModules.default
-          inputs.spicetify-nix.homeManagerModules.default
+          spicetify-nix.homeManagerModules.default
+          nixcord.homeManagerModules.nixcord
         ];
       };
       desktop-guest = home-manager.lib.homeManagerConfiguration {
@@ -58,7 +60,6 @@
         modules = [
           ./modules/home-manager/desktop/guest/home.nix
           nvf.homeManagerModules.default
-          nixcord.homeManagerModules.nixcord
         ];
       };
     };
