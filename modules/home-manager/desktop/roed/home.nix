@@ -73,6 +73,7 @@
     mpv
     yarn
     nodejs
+    onlyoffice-bin
   ];
 
   # Default applications
