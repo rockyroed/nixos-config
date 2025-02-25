@@ -28,6 +28,7 @@
     ../../config/oh-my-posh/default.nix
     ../../config/desktop-entry/default.nix
     ../../config/nixcord/default.nix
+    ../../config/obs-studio/default.nix
   ];
 
   # Home Manager needs a bit of information about you and the paths it should
@@ -53,7 +54,6 @@
     autotiling
     xborders
     feh
-    obs-studio
     signal-desktop
     vscode
     proton-pass
@@ -70,7 +70,9 @@
     alejandra
     protonmail-desktop
     bruno
-    # davinci-resolve
+    mpv
+    yarn
+    nodejs
   ];
 
   # Default applications
