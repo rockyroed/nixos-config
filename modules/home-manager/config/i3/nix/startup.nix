@@ -5,6 +5,10 @@
       notification = false;
     }
     {
+      command = "discord";
+      notification = false;
+    }
+    {
       command = "flameshot";
       notification = false;
     }
@@ -49,7 +53,7 @@
       always = true;
     }
     {
-      command = "feh --bg-fill $HOME/.wallpapers/gruv-limits.png";
+      command = "feh --bg-fill $HOME/.wallpapers/the-regular-show.png";
       notification = false;
       always = true;
     }
