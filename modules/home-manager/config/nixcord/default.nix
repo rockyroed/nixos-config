@@ -1,6 +1,7 @@
 {...}: {
   programs.nixcord = {
     enable = true;
+    discord.openASAR.enable = false;
     config = {
       frameless = true;
       disableMinSize = true;
