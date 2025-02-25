@@ -1,7 +1,11 @@
 # Edit this configuration file to define what should be installed on
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
-{pkgs, ...}: {
+{
+  config,
+  pkgs,
+  ...
+}: {
   imports = [
     ./hardware.nix
   ];
@@ -18,6 +22,15 @@
       theme = "${pkgs.minimal-grub-theme}";
     };
   };
+
+  # OBS Virtual Camera
+  boot.extraModulePackages = with config.boot.kernelPackages; [
+    v4l2loopback
+  ];
+  boot.extraModprobeConfig = ''
+    options v4l2loopback devices=1 video_nr=1 card_label="OBS Cam" exclusive_caps=1
+  '';
+  security.polkit.enable = true;
 
   # Hostname
   networking.hostName = "roed-nixos";
@@ -84,9 +97,6 @@
     alsa.support32Bit = true;
     pulse.enable = true;
   };
-
-  # Enable polkit
-  security.polkit.enable = true;
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users = {
