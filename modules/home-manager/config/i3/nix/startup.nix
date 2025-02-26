@@ -53,7 +53,7 @@
       always = true;
     }
     {
-      command = "feh --bg-fill $HOME/.wallpapers/the-regular-show.png";
+      command = "feh --bg-fill $HOME/.wallpapers/regular-show.png";
       notification = false;
       always = true;
     }
