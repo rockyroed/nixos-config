@@ -38,11 +38,11 @@ in {
     "${mod}+r" = "exec --no-startup-id rofi -show run";
     "${mod}+space" = "exec --no-startup-id rofi -show drun";
     "${mod}+Tab" = "exec --no-startup-id rofi -show window";
-    "${mod}+Shift+e" = "exec --no-startup-id rofi -show emoji";
-    "${mod}+Shift+c" = "exec --no-startup-id rofi -show calc";
+    "${mod}+e" = "exec --no-startup-id rofi -show emoji";
+    "${mod}+c" = "exec --no-startup-id rofi -show calc";
     "${mod}+Ctrl+Shift+e" = "exec --no-startup-id ~/.config/rofi/power-menu.sh";
 
-    "${mod}+c" = "exec --no-startup-id ${centerMouse}";
+    "${mod}+Shift+c" = "exec --no-startup-id ${centerMouse}";
 
     # screenshot
     "${mod}+s" = "exec flameshot gui";
