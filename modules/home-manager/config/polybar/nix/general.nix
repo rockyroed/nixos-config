@@ -35,8 +35,8 @@ in {
       font-1 = "JetBrainsMono Nerd Font Propo:size=11;2";
 
       modules-left = "i3";
-      modules-center = "date";
-      modules-right = "pulseaudio eth cpu memory fs-nix fs-hdd";
+      modules-center = "date time-washington";
+      modules-right = "pulseaudio eth cpu memory fs-nix fs-hdd systray";
 
       cursor-click = "pointer";
       enable-ipc = true;
