@@ -74,6 +74,7 @@
     yarn
     nodejs
     onlyoffice-bin
+    github-desktop
   ];
 
   # Default applications
